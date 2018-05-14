@@ -50,6 +50,7 @@
             this.выбратьПользователяToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.выходToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panelDelivery = new System.Windows.Forms.Panel();
+            this.dgvDelivery = new System.Windows.Forms.DataGridView();
             this.lblReader = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.txtGoogle = new System.Windows.Forms.TextBox();
@@ -65,7 +66,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btnAdd = new System.Windows.Forms.Button();
-            this.dgvDelivery = new System.Windows.Forms.DataGridView();
             this.panelReader = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -318,12 +318,9 @@
             // 
             // panelDelivery
             // 
-            this.panelDelivery.Controls.Add(this.dgvDelivery);
             this.panelDelivery.Controls.Add(this.lblReader);
             this.panelDelivery.Controls.Add(this.label4);
             this.panelDelivery.Controls.Add(this.txtGoogle);
-            this.panelDelivery.Controls.Add(this.btnReturn2);
-            this.panelDelivery.Controls.Add(this.btnListReturnBook);
             this.panelDelivery.Controls.Add(this.btnReturnBooks);
             this.panelDelivery.Controls.Add(this.btnReturn);
             this.panelDelivery.Controls.Add(this.cbDeliveryEmployee);
@@ -334,11 +331,26 @@
             this.panelDelivery.Controls.Add(this.label2);
             this.panelDelivery.Controls.Add(this.label1);
             this.panelDelivery.Controls.Add(this.btnAdd);
+            this.panelDelivery.Controls.Add(this.dgvDelivery);
+            this.panelDelivery.Controls.Add(this.btnReturn2);
+            this.panelDelivery.Controls.Add(this.btnListReturnBook);
             this.panelDelivery.Location = new System.Drawing.Point(6, 27);
             this.panelDelivery.Name = "panelDelivery";
             this.panelDelivery.Size = new System.Drawing.Size(471, 155);
             this.panelDelivery.TabIndex = 1;
             this.panelDelivery.Visible = false;
+            // 
+            // dgvDelivery
+            // 
+            this.dgvDelivery.AllowUserToAddRows = false;
+            this.dgvDelivery.AllowUserToDeleteRows = false;
+            this.dgvDelivery.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDelivery.Location = new System.Drawing.Point(8, 3);
+            this.dgvDelivery.Name = "dgvDelivery";
+            this.dgvDelivery.ReadOnly = true;
+            this.dgvDelivery.Size = new System.Drawing.Size(457, 116);
+            this.dgvDelivery.TabIndex = 21;
+            this.dgvDelivery.Visible = false;
             // 
             // lblReader
             // 
@@ -484,18 +496,6 @@
             this.btnAdd.UseVisualStyleBackColor = true;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
-            // dgvDelivery
-            // 
-            this.dgvDelivery.AllowUserToAddRows = false;
-            this.dgvDelivery.AllowUserToDeleteRows = false;
-            this.dgvDelivery.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDelivery.Location = new System.Drawing.Point(8, 3);
-            this.dgvDelivery.Name = "dgvDelivery";
-            this.dgvDelivery.ReadOnly = true;
-            this.dgvDelivery.Size = new System.Drawing.Size(457, 116);
-            this.dgvDelivery.TabIndex = 21;
-            this.dgvDelivery.Visible = false;
-            // 
             // panelReader
             // 
             this.panelReader.Controls.Add(this.label6);
@@ -609,7 +609,6 @@
             // 
             // panelReadAdd
             // 
-            this.panelReadAdd.Controls.Add(this.dgvReaderss);
             this.panelReadAdd.Controls.Add(this.mxtTelefone);
             this.panelReadAdd.Controls.Add(this.btnDeleteReader);
             this.panelReadAdd.Controls.Add(this.button1);
@@ -631,6 +630,7 @@
             this.panelReadAdd.Controls.Add(this.textBox2);
             this.panelReadAdd.Controls.Add(this.label12);
             this.panelReadAdd.Controls.Add(this.label14);
+            this.panelReadAdd.Controls.Add(this.dgvReaderss);
             this.panelReadAdd.Location = new System.Drawing.Point(483, 27);
             this.panelReadAdd.Name = "panelReadAdd";
             this.panelReadAdd.Size = new System.Drawing.Size(471, 211);

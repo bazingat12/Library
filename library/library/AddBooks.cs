@@ -22,7 +22,6 @@ namespace library
         public AddBooks()
         {
             InitializeComponent();
-            panelListBook.Visible = false;
             panelBooks.Visible = false;
         }
 
@@ -35,7 +34,6 @@ namespace library
                 SqlDataAdapter da = new SqlDataAdapter("SELECT ID_Book AS КОД_КНИГИ, Publisher._Publisher AS ПУБЛИКАТОР, NameBook AS НАИМЕНОВАНИЕ_КНИГИ, book_genre.Genre AS ЖАНР FROM dbo.Books INNER JOIN dbo.Publisher ON Books._ID_Publisher = Publisher.ID_Publisher INNER JOIN dbo.book_genre ON Books.GenreID = book_genre.GenreID", con);
                 da.Fill(dt);
                 dgvBooks.DataSource = dt.DefaultView;
-                dgvListBook.DataSource = dt.DefaultView;
             }
             catch (Exception)
             {
@@ -190,7 +188,7 @@ namespace library
 
 
 
-        //класс для работы с данными
+        //класс для работы с данными по СОТРУДНИКАМ
         public class Employee
         {
             public int ID_Employee { get; private set; }
@@ -254,7 +252,8 @@ namespace library
 
         private void ShowEmployee()
         {
-            FIO.FillListBox(cbEmployeeNew, "строкасоединениясбазойданных");
+            Employee.FillListBox(cbEmployeeNew, "строкасоединениясбазойданных");
+            Employee.FillListBox(cbEmployeeOut, "строкасоединениясбазойданных");
         }
 
         //класс для работы с данными
@@ -456,16 +455,16 @@ namespace library
 
         private void AddBooks_Load(object sender, EventArgs e)
         {
-            ShowBook();
-            ShowGenre();
-            ShowPublisher();
+              ShowBook();
+              ShowGenre();
+              ShowPublisher();
+            ShowEmployee();
         }
 
         private void mnuListBook_Click(object sender, EventArgs e)
         {
             this.Height = 109;
             this.Width = 517;
-            panelBooks.Visible = false;
             panelAuthor.Visible = false;
             panelGenre.Visible = false;
             panelNew.Visible = false;
@@ -475,12 +474,17 @@ namespace library
             panelOut.Visible = false;
             panelExemplar.Visible = false;
             panelContent.Visible = false;          
-            panelListBook.Visible = true;
-            panelListBook.Location = new Point(12, 27);
-            this.dgvBooks.Height = 177;
-            this.dgvBooks.Width = 458;
-            label13.Visible = false;
-            dgvBooks.Visible = true;
+            panelBooks.Visible = true;
+            panelBooks.Location = new Point(12, 27);
+            dgvBooks.Visible = false;
+            label1.Visible = false;
+            lblGoogleBook.Visible = true;
+            txtGoogleBook.Visible = true;
+            btnListBook.Visible = true;
+            label6.Visible = false;
+            cbPublisher.Visible = false;
+            btnChangeBook.Visible = true;
+            btnDeleteBook.Visible = false;
 
 
         }
@@ -517,10 +521,8 @@ namespace library
 
         private void txtGoogleBook_TextChanged(object sender, EventArgs e)
         {
-            btnDeleteBook.Visible = false;
-            btnChangeBook.Visible = true;
             dgvBooks.Visible = true;
-            this.Height = 289;
+            this.Height = 261;
             this.Width = 517;
             dgvBooks.CurrentCell = null;
             {
@@ -538,27 +540,6 @@ namespace library
             }
         }
 
-        private void txtGoogleListBook_TextChanged(object sender, EventArgs e)
-        {
-            btnChangeBook.Visible = true;
-            dgvListBook.Visible = true;
-            this.Height = 263;
-            this.Width = 517;
-            dgvListBook.CurrentCell = null;
-            {
-                for (int i = 0; i < dgvListBook.RowCount; i++)
-                {
-                    dgvListBook.Rows[i].Visible = false;
-                    for (int j = 0; j < dgvListBook.ColumnCount; j++)
-                        if (dgvListBook.Rows[i].Cells[j].Value != null)
-                            if (dgvListBook.Rows[i].Cells[j].Value.ToString().ToLower().Contains(txtGoogleListBook.Text.ToLower()))
-                            {
-                                dgvListBook.Rows[i].Visible = true;
-                                break;
-                            }
-                }
-            }
-        }
 
         private void mnuAddBook_Click(object sender, EventArgs e)
         {
@@ -572,27 +553,25 @@ namespace library
             panelPub.Visible = false;
             panelSafe.Visible = false;
             panelWork.Visible = false;
-            panelListBook.Visible = false;
-            label2.Visible = false;
             txtID_Book.Visible = false;
-            label13.Visible = false;
             lblGoogleBook.Visible = false;
             txtGoogleBook.Visible = false;
             btnListBook.Visible = false;
             dgvBooks.Visible = false;
             btnEditBook.Visible = false;
+            btnAdd.Visible = true;
             this.Width = 517;
             this.Height = 179;
             label1.Visible = false;
             txtID_Book.Visible = false;
             label6.Visible = true;
-            label6.Location = new Point(25, 26);
-            label2.Location = new Point(25, 90);
-            label5.Location = new Point(25, 52);
-            label4.Location = new Point(25, 85);
-            cbPublisher.Location = new Point(150, 20);
-            txtBook.Location = new Point(150, 52);
-            cbGenre.Location = new Point(150, 77);
+            cbPublisher.Visible = true;
+            label6.Location = new Point(25, 20);
+            label5.Location = new Point(25, 50);
+            label4.Location = new Point(25, 79);
+            cbPublisher.Location = new Point(150, 13);
+            txtBook.Location = new Point(150, 43);
+            cbGenre.Location = new Point(150, 71);
         }
 
         private void mnuEditBook_Click(object sender, EventArgs e)
@@ -603,11 +582,9 @@ namespace library
             label6.Visible = false;
             txtGoogleBook.Visible = true;
             lblGoogleBook.Visible = true;
-            label13.Visible = true;
             btnListBook.Visible = true;
             btnAdd.Visible = false;
             label1.Location = new Point(25, 61);
-            label2.Location = new Point(25, 90);
             label5.Location = new Point(25, 122);
             label4.Location = new Point(25, 155);
             txtID_Book.Location = new Point(150, 58);
@@ -615,9 +592,12 @@ namespace library
             txtBook.Location = new Point(150, 122);
             cbGenre.Location = new Point(150, 147);
 
+
             panelBooks.Visible = true;
             this.Height = 109;
             this.Width = 517;
+            btnChangeBook.Visible = true;
+            btnDeleteBook.Visible = false;
         }
 
         private void btnChangeBook_Click(object sender, EventArgs e)
@@ -632,14 +612,24 @@ namespace library
             cbGenre.Text = dgvBooks[3, number].Value.ToString();
             lblNameExemplar.Visible = true;
             btnListBooks.Visible = true;
+            label1.Visible = true;
+            label6.Visible = true;
+            cbPublisher.Visible = true;
+            btnAdd.Visible = false;
+
+            label6.Location = new Point(25, 95);
+            label5.Location = new Point(25, 125);
+            label4.Location = new Point(25, 154);
+            cbPublisher.Location = new Point(150, 88);
+            txtBook.Location = new Point(150, 118);
+            cbGenre.Location = new Point(150, 146);
+
         }
 
         private void btnListBook_Click(object sender, EventArgs e)
         {
-            btnDeleteBook.Visible = false;
-            btnChangeBook.Visible = true;
             dgvBooks.Visible = true;
-            this.Height = 289;
+            this.Height = 261;
             this.Width = 517;
             dgvBooks.CurrentCell = null;
             {
@@ -669,17 +659,19 @@ namespace library
             panelPub.Visible = false;
             panelSafe.Visible = false;
             panelWork.Visible = false;
-            panelListBook.Visible = false;
             btnDeleteBook.Visible = true;
             this.Height = 263;
             this.Width = 517;
-            panelBooks.Visible = false;
-            panelListBook.Visible = true;
-            panelListBook.Location = new Point(12, 27);
-            this.dgvBooks.Height = 177;
-            this.dgvBooks.Width = 458;
-            label13.Visible = false;
-            dgvListBook.Visible = true;
+            panelBooks.Location = new Point(12, 27);
+            lblGoogleBook.Visible = true;
+            txtGoogleBook.Visible = true;
+            btnListBook.Visible = true;
+            label6.Visible = false;
+            cbPublisher.Visible = false;
+            dgvBooks.Visible = true;
+            btnDeleteBook.Visible = true;
+            btnChangeBook.Visible = false;
+            label1.Visible = false;
         }
 
         private void btnDeleteBook_Click(object sender, EventArgs e)
@@ -688,7 +680,7 @@ namespace library
             {
                 con.Open();
                 DataTable dt = new DataTable();
-                SqlDataAdapter da = new SqlDataAdapter("Delete from Books where ID_Book=" + Convert.ToInt16(dgvListBook.CurrentRow.Cells[0].Value.ToString()) + "  ", con);
+                SqlDataAdapter da = new SqlDataAdapter("Delete from Books where ID_Book=" + Convert.ToInt16(dgvBooks.CurrentRow.Cells[0].Value.ToString()) + "  ", con);
                 da.Fill(dt);
                 SqlCommandBuilder cb = new SqlCommandBuilder(da);
                 da.Update(dt);
@@ -702,27 +694,6 @@ namespace library
             }
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            btnChangeBook.Visible = true;
-            dgvListBook.Visible = true;
-            this.Height = 263;
-            this.Width = 517;
-            dgvListBook.CurrentCell = null;
-            {
-                for (int i = 0; i < dgvListBook.RowCount; i++)
-                {
-                    dgvListBook.Rows[i].Visible = false;
-                    for (int j = 0; j < dgvListBook.ColumnCount; j++)
-                        if (dgvListBook.Rows[i].Cells[j].Value != null)
-                            if (dgvListBook.Rows[i].Cells[j].Value.ToString().ToLower().Contains(txtGoogleListBook.Text.ToLower()))
-                            {
-                                dgvListBook.Rows[i].Visible = true;
-                                break;
-                            }
-                }
-            }
-        }
 
         private void mnuClose_Click(object sender, EventArgs e)
         {
@@ -739,7 +710,6 @@ namespace library
 
         private void mnuListWork_Click(object sender, EventArgs e)
         {
-            textBox1.Visible = false;
             ShowWork();
             panelOut.Visible = false;
             panelExemplar.Visible = false;
@@ -751,7 +721,6 @@ namespace library
             btnAddWork.Visible = false;
             btnEditWork.Visible = false;
             dgvWork.Visible = true;
-            label8.Visible = false;
             lblGoogleWork.Visible = true;
             txtGoogleWork.Visible = true;
             btnGoogleWork.Visible = true;
@@ -763,14 +732,14 @@ namespace library
             panelNew.Visible = false;
             panelPub.Visible = false;
             panelSafe.Visible = false;
-            panelListBook.Visible = false;
             panelWork.Visible = true;
             panelWork.Location = new Point(12, 27);
+            btnChangeWork.Visible = true;
+            btnDeleteWork.Visible = false;
         }
 
         private void txtGoogleWork_TextChanged(object sender, EventArgs e)
         {
-            btnChangeWork.Visible = true;
             btnGoogleWork.Visible = true;
             dgvWork.Visible = true;
             this.Height = 263;
@@ -835,7 +804,6 @@ namespace library
 
         private void mnuAddWork_Click(object sender, EventArgs e)
         {
-            textBox1.Visible = false;
             panelOut.Visible = false;
             panelExemplar.Visible = false;
             panelContent.Visible = false;
@@ -845,13 +813,11 @@ namespace library
             panelNew.Visible = false;
             panelPub.Visible = false;
             panelSafe.Visible = false;
-            panelListBook.Visible = false;
             panelWork.Visible = true;
             panelWork.Location = new Point(12, 27);
             ShowAuthor();
             this.Height = 147;
             dgvWork.Visible = false;
-            label8.Visible = false;
             lblGoogleWork.Visible = false;
             txtGoogleWork.Visible = false;
             btnGoogleWork.Visible = false;
@@ -872,7 +838,6 @@ namespace library
 
         private void mnuEditWork_Click(object sender, EventArgs e)
         {
-            textBox1.Visible = false;
             panelOut.Visible = false;
             panelExemplar.Visible = false;
             panelContent.Visible = false;
@@ -882,7 +847,6 @@ namespace library
             panelNew.Visible = false;
             panelPub.Visible = false;
             panelSafe.Visible = false;
-            panelListBook.Visible = false;
             panelWork.Visible = true;
             panelWork.Location = new Point(12, 27);
             ShowWork();
@@ -893,15 +857,15 @@ namespace library
             btnAddWork.Visible = false;
             btnEditWork.Visible = false;
             dgvWork.Visible = true;
-            label8.Visible = false;
             lblGoogleWork.Visible = true;
             txtGoogleWork.Visible = true;
             btnGoogleWork.Visible = true;
             this.Height = 109;
             this.Width = 392;
             panelBooks.Visible = false;
-            panelListBook.Visible = false;
             panelWork.Visible = true;
+            btnChangeWork.Visible = true;
+            btnDeleteWork.Visible = false;
         }
 
         private void btnAddWork_Click(object sender, EventArgs e)
@@ -965,16 +929,14 @@ namespace library
             panelNew.Visible = false;
             panelPub.Visible = false;
             panelSafe.Visible = false;
-            panelListBook.Visible = false;
             panelWork.Visible = true;
             panelWork.Location = new Point(12, 27);
             this.Height = 287;
             dgvWork.Visible = true;
-            txtGoogleWork.Visible = false;
+            txtGoogleWork.Visible = true;
             btnGoogleWork.Visible = false;
-            textBox1.Visible = true;
-            label8.Visible = false;
             btnDeleteWork.Visible = true;
+            btnChangeWork.Visible = false;
         }
 
         private void btnDeleteWork_Click(object sender, EventArgs e)
@@ -1026,16 +988,13 @@ namespace library
             panelNew.Visible = false;
             panelPub.Visible = false;
             panelSafe.Visible = false;
-            panelListBook.Visible = false;
             panelWork.Visible = false;
             panelAuthor.Visible = true;
             panelAuthor.Location = new Point(12, 27);
 
-            lblStartAuthor.Visible = false;
             txtGoogleAuthor.Visible = true;
             lblGoogleAuthor.Visible = true;
             btnGoogleAuthor.Visible = true;
-            txtGoogleAuthor2.Visible = false;
             txtIDAuthor.Visible = false;
             txtNameAuthor.Visible = false;
             lblIDAuthor.Visible = false;
@@ -1106,17 +1065,14 @@ namespace library
             panelNew.Visible = false;
             panelPub.Visible = false;
             panelSafe.Visible = false;
-            panelListBook.Visible = false;
             panelWork.Visible = false;
             panelAuthor.Visible = true;
             panelAuthor.Location = new Point(12, 27);
 
             dgvAuthor.Visible = false;
-            lblStartAuthor.Visible = false;
             txtGoogleAuthor.Visible = false;
             lblGoogleAuthor.Visible = false;
             btnGoogleAuthor.Visible = false;
-            txtGoogleAuthor2.Visible = false;
             txtIDAuthor.Visible = false;
             txtNameAuthor.Visible = true;
             lblIDAuthor.Visible = false;
@@ -1166,16 +1122,13 @@ namespace library
             panelNew.Visible = false;
             panelPub.Visible = false;
             panelSafe.Visible = false;
-            panelListBook.Visible = false;
             panelWork.Visible = false;
             panelAuthor.Visible = true;
             panelAuthor.Location = new Point(12, 27);
 
-            lblStartAuthor.Visible = true;
             txtGoogleAuthor.Visible = true;
             lblGoogleAuthor.Visible = true;
             btnGoogleAuthor.Visible = true;
-            txtGoogleAuthor2.Visible = false;
             txtIDAuthor.Visible = false;
             txtNameAuthor.Visible = false;
             lblIDAuthor.Visible = false;
@@ -1193,11 +1146,9 @@ namespace library
             btnChangeAuthor.Visible = false;
             this.Height = 202;
             dgvAuthor.Visible = false;
-            lblStartAuthor.Visible = true;
             txtGoogleAuthor.Visible = true;
             lblGoogleAuthor.Visible = true;
             btnGoogleAuthor.Visible = true;
-            txtGoogleAuthor2.Visible = false;
             txtIDAuthor.Visible = true;
             txtNameAuthor.Visible = true;
             lblIDAuthor.Visible = true;
@@ -1250,7 +1201,6 @@ namespace library
             panelNew.Visible = false;
             panelPub.Visible = false;
             panelSafe.Visible = false;
-            panelListBook.Visible = false;
             panelWork.Visible = false;
             panelAuthor.Visible = true;
             panelAuthor.Location = new Point(12, 27);
@@ -1259,11 +1209,9 @@ namespace library
 
             btnChangeAuthor.Visible = false;
             btnDeleteAuthor.Visible = true;
-            lblStartAuthor.Visible = true;
-            txtGoogleAuthor.Visible = true;
             lblGoogleAuthor.Visible = true;
             btnGoogleAuthor.Visible = false;
-            txtGoogleAuthor2.Visible = true;
+            txtGoogleAuthor.Visible = true;
             dgvAuthor.Visible = true;
 
 
@@ -1380,11 +1328,9 @@ namespace library
             btnChangeGenre.Visible = false;
             this.Height = 202;
             dgvGenre.Visible = false;
-            lblStartGenre.Visible = true;
             txtGoogleGenre.Visible = true;
             lblGoogleGenre.Visible = true;
             btnGoogleGenre.Visible = true;
-            txtGoogleGenre2.Visible = false;
             txtIDGenre.Visible = true;
             txtNameGenre.Visible = true;
             lblIDGenre.Visible = true;
@@ -1458,18 +1404,15 @@ namespace library
             panelNew.Visible = false;
             panelPub.Visible = false;
             panelSafe.Visible = false;
-            panelListBook.Visible = false;
             panelWork.Visible = false;
             panelAuthor.Visible = false;
             panelGenre.Visible = true;
             panelGenre.Location = new Point(12, 27);
 
             dgvGenre.Visible = false;
-            lblStartGenre.Visible = false;
             txtGoogleGenre.Visible = false;
             lblGoogleGenre.Visible = false;
             btnGoogleGenre.Visible = false;
-            txtGoogleGenre2.Visible = false;
             txtIDGenre.Visible = false;
             txtNameGenre.Visible = true;
             lblIDGenre.Visible = false;
@@ -1494,17 +1437,14 @@ namespace library
             panelNew.Visible = false;
             panelPub.Visible = false;
             panelSafe.Visible = false;
-            panelListBook.Visible = false;
             panelWork.Visible = false;
             panelAuthor.Visible = false;
             panelGenre.Visible = true;
             panelGenre.Location = new Point(12, 27);
 
-            lblStartGenre.Visible = true;
             txtGoogleGenre.Visible = true;
             lblGoogleGenre.Visible = true;
             btnGoogleGenre.Visible = true;
-            txtGoogleGenre2.Visible = false;
             txtIDGenre.Visible = false;
             txtNameGenre.Visible = false;
             lblIDGenre.Visible = false;
@@ -1527,7 +1467,6 @@ namespace library
             panelNew.Visible = false;
             panelPub.Visible = false;
             panelSafe.Visible = false;
-            panelListBook.Visible = false;
             panelWork.Visible = false;
             panelAuthor.Visible = false;
             panelGenre.Visible = true;
@@ -1537,11 +1476,9 @@ namespace library
 
             btnChangeGenre.Visible = false;
             btnDeleteGenre.Visible = true;
-            lblStartGenre.Visible = true;
             txtGoogleGenre.Visible = true;
             lblGoogleGenre.Visible = true;
             btnGoogleGenre.Visible = false;
-            txtGoogleGenre2.Visible = true;
             dgvGenre.Visible = true;
         }
 
@@ -1571,22 +1508,17 @@ namespace library
             panelBooks.Visible = false;
             panelNew.Visible = false;
             panelSafe.Visible = false;
-            panelListBook.Visible = false;
             panelWork.Visible = false;
             panelAuthor.Visible = false;
             panelGenre.Visible = false;
             panelPub.Visible = true;
             panelPub.Location = new Point(12, 27);
 
-            lblStartPub.Visible = false;
             txtGooglePub.Visible = true;
             lblGooglePub.Visible = true;
             btnGooglePub.Visible = true;
-            txtGooglePub2.Visible = false;
             txtIDPub.Visible = false;
-            txtNamePub.Visible = false;
             lblIDPub.Visible = false;
-            lblNamePub.Visible = false;
             btnDeletePub.Visible = false;
             btnChangePub.Visible = false;
             btnAddPub.Visible = false;
@@ -1604,7 +1536,6 @@ namespace library
             panelBooks.Visible = false;
             panelNew.Visible = false;
             panelSafe.Visible = false;
-            panelListBook.Visible = false;
             panelWork.Visible = false;
             panelAuthor.Visible = false;
             panelGenre.Visible = false;
@@ -1612,21 +1543,21 @@ namespace library
             panelPub.Location = new Point(12, 27);
 
             dgvPub.Visible = false;
-            lblStartPub.Visible = false;
             txtGooglePub.Visible = false;
             lblGooglePub.Visible = false;
             btnGooglePub.Visible = false;
-            txtGooglePub2.Visible = false;
             txtIDPub.Visible = false;
-            txtNamePub.Visible = true;
             lblIDPub.Visible = false;
-            lblNamePub.Visible = true;
             btnDeletePub.Visible = false;
             btnChangePub.Visible = false;
-            btnAddPub.Visible = true;
             btnEditPub.Visible = false;
-            lblNamePub.Location = new Point(7, 21);
-            txtNamePub.Location = new Point(86, 20);
+            label6.Visible = true;
+            txtNamePub.Visible = true;
+            btnAddPub.Visible = true;
+            lblNamePub.Visible = true;
+            btnAddPub.Location = new Point(198, 49);
+            txtNamePub.Location = new Point(99, 15);
+            lblNamePub.Location = new Point(11, 22);
             this.Height = 145;
             this.Width = 305;
         }
@@ -1640,26 +1571,23 @@ namespace library
             panelBooks.Visible = false;
             panelNew.Visible = false;
             panelSafe.Visible = false;
-            panelListBook.Visible = false;
             panelWork.Visible = false;
             panelAuthor.Visible = false;
             panelGenre.Visible = false;
             panelPub.Visible = true;
             panelPub.Location = new Point(12, 27);
 
-            lblStartPub.Visible = true;
             txtGooglePub.Visible = true;
             lblGooglePub.Visible = true;
             btnGooglePub.Visible = true;
-            txtGooglePub2.Visible = false;
             txtIDPub.Visible = false;
-            txtNamePub.Visible = false;
             lblIDPub.Visible = false;
-            lblNamePub.Visible = false;
             btnDeletePub.Visible = false;
             btnChangePub.Visible = false;
             btnAddPub.Visible = false;
             btnEditPub.Visible = false;
+            lblNamePub.Location = new Point(13, 90);
+            txtNamePub.Location = new Point(97, 82);
             this.Height = 109;
             this.Width = 305;
         }
@@ -1673,23 +1601,22 @@ namespace library
             panelBooks.Visible = false;
             panelNew.Visible = false;
             panelSafe.Visible = false;
-            panelListBook.Visible = false;
             panelWork.Visible = false;
             panelAuthor.Visible = false;
             panelGenre.Visible = false;
             panelPub.Visible = true;
             panelPub.Location = new Point(12, 27);
-            this.Height = 311;
+            this.Height = 263;
             this.Width = 305;
 
             btnChangePub.Visible = false;
             btnDeletePub.Visible = true;
-            lblStartPub.Visible = true;
             txtGooglePub.Visible = true;
             lblGooglePub.Visible = true;
-            btnGooglePub.Visible = false;
-            txtGooglePub2.Visible = true;
+            btnGooglePub.Visible = true;
             dgvPub.Visible = true;
+            lblNamePub.Visible = false;
+            txtNamePub.Visible = false;
         }
 
         private void txtGooglePub2_TextChanged(object sender, EventArgs e)
@@ -1782,21 +1709,21 @@ namespace library
             btnChangePub.Visible = false;
             this.Height = 202;
             dgvPub.Visible = false;
-            lblStartPub.Visible = true;
             txtGooglePub.Visible = true;
             lblGooglePub.Visible = true;
             btnGooglePub.Visible = true;
-            txtGooglePub2.Visible = false;
             txtIDPub.Visible = true;
-            txtNamePub.Visible = true;
             lblIDPub.Visible = true;
-            lblNamePub.Visible = true;
             btnDeletePub.Visible = false;
             btnChangePub.Visible = false;
             btnAddPub.Visible = false;
             btnEditPub.Visible = true;
-            lblNamePub.Location = new Point(13, 90);
-            txtNamePub.Location = new Point(97, 82);
+            btnEditPub.Location = new Point(199, 116);
+            lblIDPub.Location = new Point(13, 61);
+            lblNamePub.Visible = true;
+            lblNamePub.Location = new Point(9, 92);
+            txtIDPub.Location = new Point(97, 51);
+            txtNamePub.Location = new Point(97, 85);
 
             int number = dgvPub.CurrentRow.Index;
             txtIDPub.Text = dgvPub[0, number].Value.ToString();
@@ -1858,7 +1785,6 @@ namespace library
             panelContent.Visible = false;
             panelBooks.Visible = false;
             panelNew.Visible = false;
-            panelListBook.Visible = false;
             panelWork.Visible = false;
             panelAuthor.Visible = false;
             panelGenre.Visible = false;
@@ -1866,7 +1792,6 @@ namespace library
             panelSafe.Visible = true;
             panelSafe.Location = new Point(12, 27);
 
-            lblStartSafe.Visible = false;
             txtGoogleSafe.Visible = true;
             lblGoogleSafe.Visible = true;
             btnGoogleSafe.Visible = true;
@@ -1891,7 +1816,6 @@ namespace library
             panelContent.Visible = false;
             panelBooks.Visible = false;
             panelNew.Visible = false;
-            panelListBook.Visible = false;
             panelWork.Visible = false;
             panelAuthor.Visible = false;
             panelGenre.Visible = false;
@@ -1899,11 +1823,9 @@ namespace library
             panelSafe.Visible = true;
             panelSafe.Location = new Point(12, 27);
 
-            lblStartSafe.Visible = false;
             txtGoogleSafe.Visible = false;
             lblGoogleSafe.Visible = false;
             btnGoogleSafe.Visible = false;
-            txtGoogleSafe2.Visible = false;
             txtIDSafe.Visible = false;
             txtNameSafe.Visible = true;
             lblIDSafe.Visible = false;
@@ -1927,7 +1849,6 @@ namespace library
             panelContent.Visible = false;
             panelBooks.Visible = false;
             panelNew.Visible = false;
-            panelListBook.Visible = false;
             panelWork.Visible = false;
             panelAuthor.Visible = false;
             panelGenre.Visible = false;
@@ -1935,11 +1856,9 @@ namespace library
             panelSafe.Visible = true;
             panelSafe.Location = new Point(12, 27);
 
-            lblStartSafe.Visible = true;
             txtGoogleSafe.Visible = true;
             lblGoogleSafe.Visible = true;
             btnGoogleSafe.Visible = true;
-            txtGoogleSafe2.Visible = false;
             txtIDSafe.Visible = false;
             txtNameSafe.Visible = false;
             lblIDSafe.Visible = false;
@@ -1960,7 +1879,6 @@ namespace library
             panelContent.Visible = false;
             panelBooks.Visible = false;
             panelNew.Visible = false;
-            panelListBook.Visible = false;
             panelWork.Visible = false;
             panelAuthor.Visible = false;
             panelGenre.Visible = false;
@@ -1972,11 +1890,9 @@ namespace library
 
             btnChangeSafe.Visible = false;
             btnDeleteSafe.Visible = true;
-            lblStartSafe.Visible = true;
             txtGoogleSafe.Visible = true;
             lblGoogleSafe.Visible = true;
             btnGoogleSafe.Visible = false;
-            txtGoogleSafe2.Visible = true;
             dgvSafe.Visible = true;
         }
 
@@ -2117,11 +2033,9 @@ namespace library
             btnChangeSafe.Visible = false;
             this.Height = 202;
             dgvSafe.Visible = false;
-            lblStartSafe.Visible = true;
             txtGoogleSafe.Visible = true;
             lblGoogleSafe.Visible = true;
             btnGoogleSafe.Visible = true;
-            txtGoogleSafe2.Visible = false;
             txtIDSafe.Visible = true;
             txtNameSafe.Visible = true;
             lblIDSafe.Visible = true;
@@ -2148,17 +2062,14 @@ namespace library
             panelNew.Visible = false;
             panelPub.Visible = false;
             panelSafe.Visible = false;
-            panelListBook.Visible = false;
             panelWork.Visible = false;
             panelAuthor.Visible = false;
             panelGenre.Visible = true;
             panelGenre.Location = new Point(12, 27);
 
-            lblStartGenre.Visible = false;
             txtGoogleGenre.Visible = true;
             lblGoogleGenre.Visible = true;
             btnGoogleGenre.Visible = true;
-            txtGoogleGenre2.Visible = false;
             txtIDGenre.Visible = false;
             txtNameGenre.Visible = false;
             lblIDGenre.Visible = false;
@@ -2207,7 +2118,6 @@ namespace library
             panelContent.Visible = false;
             panelBooks.Visible = false;
             panelWork.Visible = false;
-            panelListBook.Visible = false;
             panelAuthor.Visible = false;
             panelGenre.Visible = false;
             panelPub.Visible = false;
@@ -2215,7 +2125,6 @@ namespace library
             panelNew.Visible = true;
             panelNew.Location = new Point(12, 27);
 
-            lblStartNew.Visible = false;
             txtGoogleNew.Visible = true;
             lblGoogleNew.Visible = true;
             btnGoogleNew.Visible = true;
@@ -2235,7 +2144,9 @@ namespace library
             btnDeleteNew.Visible = false;
             btnChangeNew.Visible = false;
             btnAddNew.Visible = false;
-            btnEditNew.Visible = false;
+            btnEditNew.Visible = true;
+            btnChangeNew.Visible = true;
+            btnDeleteNew.Visible = false;
             this.Height = 109;
             this.Width = 506;
 
@@ -2250,7 +2161,6 @@ namespace library
             panelContent.Visible = false;
             panelBooks.Visible = false;
             panelWork.Visible = false;
-            panelListBook.Visible = false;
             panelAuthor.Visible = false;
             panelGenre.Visible = false;
             panelPub.Visible = false;
@@ -2259,11 +2169,9 @@ namespace library
             dgvNew.Visible = false;
             panelNew.Location = new Point(12, 27);
 
-            lblStartNew.Visible = false;
             txtGoogleNew.Visible = false;
             lblGoogleNew.Visible = false;
             btnGoogleNew.Visible = false;
-            txtGoogleNew2.Visible = false;
             txtIDNew.Visible = false;
             lblIDNew.Visible = false;
             lblEmployeeNew.Visible = true;
@@ -2280,6 +2188,7 @@ namespace library
             btnChangeNew.Visible = false;
             btnAddNew.Visible = true;
             btnEditNew.Visible = false;
+            btnAddNew.Location = new Point(386,86);
             lblEmployeeNew.Location = new Point(14, 21);
             lblIDExemplar.Location = new Point(14, 61);
             lblPostNew.Location = new Point (14, 95);
@@ -2335,7 +2244,6 @@ namespace library
             this.Height = 261;
             this.Width = 506;
             btnChangeNew.Visible = true;
-            btnDeleteNew.Visible = false;
             btnGoogleNew.Visible = true;
             txtGoogleNew.Visible = true;
             lblGoogleNew.Visible = true;
@@ -2364,7 +2272,6 @@ namespace library
             panelContent.Visible = false;
             panelBooks.Visible = false;
             panelWork.Visible = false;
-            panelListBook.Visible = false;
             panelAuthor.Visible = false;
             panelGenre.Visible = false;
             panelPub.Visible = false;
@@ -2375,6 +2282,7 @@ namespace library
 
             this.Height =  265;
             dgvNew.Visible = true;
+            btnChangeNew.Visible = false;
             btnDeleteNew.Visible = true;
         }
 
@@ -2388,11 +2296,9 @@ namespace library
             btnChangeNew.Visible = false;
             this.Height = 248;
             dgvNew.Visible = false;
-            lblStartNew.Visible = true;
             txtGoogleNew.Visible = true;
             lblGoogleNew.Visible = true;
             btnGoogleNew.Visible = true;
-            txtGoogleNew2.Visible = false;
             txtIDNew.Visible = true;
             lblIDNew.Visible = true;
             lblEmployeeNew.Visible = true;
@@ -2425,10 +2331,10 @@ namespace library
             int number = dgvNew.CurrentRow.Index;
             txtIDNew.Text = dgvNew[0, number].Value.ToString();
             cbEmployeeNew.Text = dgvNew[1, number].Value.ToString();
-            txtIDExemplar.Text = dgvNew[2, number].Value.ToString();
-            txtPostNew.Text = dgvNew[3, number].Value.ToString();
-            txtPriceNew.Text = dgvNew[4, number].Value.ToString();
-            txtDeliveryNew.Text = dgvNew[5, number].Value.ToString();
+            txtIDExemplar.Text = dgvNew[4, number].Value.ToString();
+            txtPostNew.Text = dgvNew[5, number].Value.ToString();
+            txtPriceNew.Text = dgvNew[6, number].Value.ToString();
+            txtDeliveryNew.Text = dgvNew[7, number].Value.ToString();
         }
 
         private void btnEditNew_Click(object sender, EventArgs e)
@@ -2483,13 +2389,12 @@ namespace library
 
         private void mnuEditNew_Click(object sender, EventArgs e)
         {
-            ShowGenredgv();
+            ShowEmployee();
             panelOut.Visible = false;
             panelExemplar.Visible = false;
             panelContent.Visible = false;
             panelBooks.Visible = false;
             panelWork.Visible = false;
-            panelListBook.Visible = false;
             panelAuthor.Visible = false;
             panelGenre.Visible = false;
             panelPub.Visible = false;
@@ -2498,7 +2403,6 @@ namespace library
             panelNew.Visible = true;
             panelNew.Location = new Point(12, 27);
 
-            lblStartNew.Visible = false;
             txtGoogleNew.Visible = true;
             lblGoogleNew.Visible = true;
             btnGoogleNew.Visible = true;
@@ -2518,7 +2422,9 @@ namespace library
             btnDeleteNew.Visible = false;
             btnChangeNew.Visible = false;
             btnAddNew.Visible = false;
-            btnEditNew.Visible = false;
+            btnEditNew.Visible = true;
+            btnChangeNew.Visible = true;
+            btnDeleteNew.Visible = false;
             this.Height = 251;
             this.Width = 512;
         }
@@ -2531,7 +2437,6 @@ namespace library
             panelContent.Visible = false;
             panelBooks.Visible = false;
             panelWork.Visible = false;
-            panelListBook.Visible = false;
             panelAuthor.Visible = false;
             panelGenre.Visible = false;
             panelPub.Visible = false;
@@ -2539,7 +2444,6 @@ namespace library
             panelOut.Visible = true;
             panelOut.Location = new Point(12, 27);
 
-            lblStartOut.Visible = false;
             txtGoogleOut.Visible = true;
             lblGoogleOut.Visible = true;
             btnGoogleOut.Visible = true;
@@ -2553,9 +2457,8 @@ namespace library
             txtIDExemplarOut.Visible = false;
             txtWhy.Visible = false;
             btnDeleteOut.Visible = false;
-            btnChangeOut.Visible = false;
-            btnAddOut.Visible = false;
-            btnEditOut.Visible = false;
+            btnChangeOut.Visible = true;
+            btnAddOut.Visible = true;
             this.Height = 109;
             this.Width = 506;
         }
@@ -2601,7 +2504,6 @@ namespace library
             this.Height = 261;
             this.Width = 506;
             btnChangeOut.Visible = true;
-            btnDeleteOut.Visible = false;
             btnGoogleOut.Visible = true;
             txtGoogleOut.Visible = true;
             lblGoogleOut.Visible = true;
@@ -2630,7 +2532,6 @@ namespace library
             panelContent.Visible = false;
             panelBooks.Visible = false;
             panelWork.Visible = false;
-            panelListBook.Visible = false;
             panelAuthor.Visible = false;
             panelGenre.Visible = false;
             panelPub.Visible = false;
@@ -2640,18 +2541,19 @@ namespace library
 
             this.Height = 265;
             dgvOut.Visible = true;
+            btnChangeOut.Visible = false;
             btnDeleteOut.Visible = true;
         }
 
         private void mnuAddOut_Click(object sender, EventArgs e)
         {
             ShowOut();
+            ShowEmployee();
             panelNew.Visible = false;
             panelExemplar.Visible = false;
             panelContent.Visible = false;
             panelBooks.Visible = false;
             panelWork.Visible = false;
-            panelListBook.Visible = false;
             panelAuthor.Visible = false;
             panelGenre.Visible = false;
             panelPub.Visible = false;
@@ -2659,11 +2561,11 @@ namespace library
             panelOut.Visible = true;
             panelOut.Location = new Point(12, 27);
 
-            lblStartOut.Visible = false;
+            dgvOut.Visible = false;
+
             txtGoogleOut.Visible = false;
             lblGoogleOut.Visible = false;
             btnGoogleOut.Visible = false;
-            txtGoogleOut2.Visible = false;
             txtIDOut.Visible = false;
             lblIDOut.Visible = false;
             lblEmployeeOut.Visible = true;
@@ -2689,12 +2591,12 @@ namespace library
         private void mnuEditOut_Click(object sender, EventArgs e)
         {
             ShowOut();
+            ShowEmployee();
             panelNew.Visible = false;
             panelExemplar.Visible = false;
             panelContent.Visible = false;
             panelBooks.Visible = false;
             panelWork.Visible = false;
-            panelListBook.Visible = false;
             panelAuthor.Visible = false;
             panelGenre.Visible = false;
             panelPub.Visible = false;
@@ -2702,7 +2604,6 @@ namespace library
             panelOut.Visible = true;
             panelOut.Location = new Point(12, 27);
 
-            lblStartOut.Visible = false;
             txtGoogleOut.Visible = true;
             lblGoogleOut.Visible = true;
             btnGoogleOut.Visible = true;
@@ -2716,7 +2617,7 @@ namespace library
             txtIDExemplarOut.Visible = false;
             txtWhy.Visible = false;
             btnDeleteOut.Visible = false;
-            btnChangeOut.Visible = false;
+            btnChangeOut.Visible = true;
             btnAddOut.Visible = false;
             btnEditOut.Visible = false;
             this.Height = 251;
@@ -2806,11 +2707,9 @@ namespace library
             btnChangeOut.Visible = false;
             this.Height = 248;
             dgvOut.Visible = false;
-            lblStartOut.Visible = true;
             txtGoogleOut.Visible = true;
             lblGoogleOut.Visible = true;
             btnGoogleOut.Visible = true;
-            txtGoogleOut2.Visible = false;
             txtIDOut.Visible = true;
             lblIDOut.Visible = true;
             lblEmployeeOut.Visible = true;
@@ -2835,8 +2734,8 @@ namespace library
             int number = dgvOut.CurrentRow.Index;
             txtIDOut.Text = dgvOut[0, number].Value.ToString();
             cbEmployeeOut.Text = dgvOut[1, number].Value.ToString();
-            txtIDExemplarOut.Text = dgvOut[2, number].Value.ToString();
-            txtWhy.Text = dgvOut[3, number].Value.ToString();
+            txtIDExemplarOut.Text = dgvOut[4, number].Value.ToString();
+            txtWhy.Text = dgvOut[5, number].Value.ToString();
         }
 
         private void button11_Click(object sender, EventArgs e)
@@ -2885,7 +2784,6 @@ namespace library
             panelContent.Visible = false;
             panelBooks.Visible = false;
             panelWork.Visible = false;
-            panelListBook.Visible = false;
             panelAuthor.Visible = false;
             panelGenre.Visible = false;
             panelPub.Visible = false;
@@ -2962,7 +2860,6 @@ namespace library
             panelContent.Visible = false;
             panelBooks.Visible = false;
             panelWork.Visible = false;
-            panelListBook.Visible = false;
             panelAuthor.Visible = false;
             panelGenre.Visible = false;
             panelPub.Visible = false;
@@ -3006,7 +2903,6 @@ namespace library
             panelContent.Visible = false;
             panelBooks.Visible = false;
             panelWork.Visible = false;
-            panelListBook.Visible = false;
             panelAuthor.Visible = false;
             panelGenre.Visible = false;
             panelPub.Visible = false;
@@ -3033,7 +2929,6 @@ namespace library
             panelContent.Visible = false;
             panelBooks.Visible = false;
             panelWork.Visible = false;
-            panelListBook.Visible = false;
             panelAuthor.Visible = false;
             panelGenre.Visible = false;
             panelPub.Visible = false;
@@ -3172,7 +3067,6 @@ namespace library
         {
             label9.Visible = false;
             ShowContent();
-            textBox1.Visible = false;
             ShowWork();
             label7.Visible = false;
             cbAuthor.Visible = false;
@@ -3180,7 +3074,6 @@ namespace library
             txtNameWork.Visible = false;
             btnAddWork.Visible = false;
             btnEditWork.Visible = false;
-            label8.Visible = false;
             this.Height = 109;
             this.Width = 390;
             panelOut.Visible = false;
@@ -3191,11 +3084,9 @@ namespace library
             panelNew.Visible = false;
             panelPub.Visible = false;
             panelSafe.Visible = false;
-            panelListBook.Visible = false;
             panelWork.Visible = false;
             panelContent.Visible = true;
             panelContent.Location = new Point(12, 27);
-            lblStartContent.Visible = true;
             lblGoogleContent.Visible = true;
             txtGoogleContent.Visible = true;
             btnGoogleContent.Visible = true;
@@ -3260,7 +3151,6 @@ namespace library
         {
             label9.Visible = false;
             ShowContent();
-            textBox1.Visible = false;
             ShowWork();
             label7.Visible = false;
             cbAuthor.Visible = false;
@@ -3268,7 +3158,6 @@ namespace library
             txtNameWork.Visible = false;
             btnAddWork.Visible = false;
             btnEditWork.Visible = false;
-            label8.Visible = false;
             this.Height = 109;
             this.Width = 390;
             panelOut.Visible = false;
@@ -3279,11 +3168,9 @@ namespace library
             panelNew.Visible = false;
             panelPub.Visible = false;
             panelSafe.Visible = false;
-            panelListBook.Visible = false;
             panelWork.Visible = false;
             panelContent.Visible = true;
             panelContent.Location = new Point(12, 27);
-            lblStartContent.Visible = true;
             lblGoogleContent.Visible = true;
             txtGoogleContent.Visible = true;
             btnGoogleContent.Visible = true;
@@ -3297,7 +3184,6 @@ namespace library
         {
             btnGoogleContent.Visible = false;
             ShowContent();
-            textBox1.Visible = false;
             ShowWork();
             label7.Visible = false;
             cbAuthor.Visible = false;
@@ -3305,7 +3191,6 @@ namespace library
             txtNameWork.Visible = false;
             btnAddWork.Visible = false;
             btnEditWork.Visible = false;
-            label8.Visible = false;
             this.Height = 288;
             this.Width = 390;
             panelOut.Visible = false;
@@ -3316,11 +3201,9 @@ namespace library
             panelNew.Visible = false;
             panelPub.Visible = false;
             panelSafe.Visible = false;
-            panelListBook.Visible = false;
             panelWork.Visible = false;
             panelContent.Visible = true;
             panelContent.Location = new Point(12, 27);
-            lblStartContent.Visible = true;
             lblGoogleContent.Visible = true;
             txtGoogleContent.Visible = true;
             btnGoogleContent.Visible = true;
@@ -3341,11 +3224,9 @@ namespace library
             panelNew.Visible = false;
             panelPub.Visible = false;
             panelSafe.Visible = false;
-            panelListBook.Visible = false;
             panelWork.Visible = false;
             panelContent.Visible = true;
             panelContent.Location = new Point(12, 27);
-            lblStartContent.Visible = false;
             lblGoogleContent.Visible = false;
             txtGoogleContent.Visible = false;
             btnGoogleContent.Visible = false;
@@ -3483,6 +3364,12 @@ namespace library
             {
                 MessageBox.Show("При удалении данных произошла ошибка. Запись об удаляемом объекте содержится в других таблицах!", "Сообщение об ошибке");
             }
+        }
+
+        private void dgvBooks_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            this.Height = 293;
+            btnChangeBook.Visible = true;
         }
     }
     }

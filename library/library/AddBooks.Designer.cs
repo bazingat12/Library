@@ -30,10 +30,10 @@
         {
             this.btnAdd = new System.Windows.Forms.Button();
             this.panelBooks = new System.Windows.Forms.Panel();
+            this.dgvBooks = new System.Windows.Forms.DataGridView();
             this.label6 = new System.Windows.Forms.Label();
             this.btnChangeBook = new System.Windows.Forms.Button();
             this.btnListBook = new System.Windows.Forms.Button();
-            this.label13 = new System.Windows.Forms.Label();
             this.btnEditBook = new System.Windows.Forms.Button();
             this.cbPublisher = new System.Windows.Forms.ComboBox();
             this.txtBook = new System.Windows.Forms.TextBox();
@@ -41,12 +41,12 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.txtID_Book = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtGoogleBook = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.lblGoogleBook = new System.Windows.Forms.Label();
-            this.dgvBooks = new System.Windows.Forms.DataGridView();
+            this.txtGoogleBook = new System.Windows.Forms.TextBox();
+            this.btnDeleteBook = new System.Windows.Forms.Button();
             this.panelContent = new System.Windows.Forms.Panel();
+            this.dgvContent = new System.Windows.Forms.DataGridView();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.txtContent = new System.Windows.Forms.TextBox();
@@ -57,13 +57,11 @@
             this.lblWorkContent = new System.Windows.Forms.Label();
             this.btnChangeContent = new System.Windows.Forms.Button();
             this.btnGoogleContent = new System.Windows.Forms.Button();
-            this.lblStartContent = new System.Windows.Forms.Label();
             this.btnEditContent = new System.Windows.Forms.Button();
             this.btnAddContent = new System.Windows.Forms.Button();
             this.lblBookContent = new System.Windows.Forms.Label();
             this.lblGoogleContent = new System.Windows.Forms.Label();
             this.txtGoogleContent = new System.Windows.Forms.TextBox();
-            this.dgvContent = new System.Windows.Forms.DataGridView();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.mnuBook = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuListBook = new System.Windows.Forms.ToolStripMenuItem();
@@ -117,19 +115,11 @@
             this.mnuEditContent = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuDeleteContent = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuClose = new System.Windows.Forms.ToolStripMenuItem();
-            this.panelListBook = new System.Windows.Forms.Panel();
-            this.btnDeleteBook = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.txtGoogleListBook = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.dgvListBook = new System.Windows.Forms.DataGridView();
             this.panelWork = new System.Windows.Forms.Panel();
             this.dgvWork = new System.Windows.Forms.DataGridView();
-            this.btnDeleteWork = new System.Windows.Forms.Button();
-            this.label7 = new System.Windows.Forms.Label();
             this.btnChangeWork = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
             this.btnGoogleWork = new System.Windows.Forms.Button();
-            this.label8 = new System.Windows.Forms.Label();
             this.btnEditWork = new System.Windows.Forms.Button();
             this.cbAuthor = new System.Windows.Forms.ComboBox();
             this.txtNameWork = new System.Windows.Forms.TextBox();
@@ -139,14 +129,13 @@
             this.label12 = new System.Windows.Forms.Label();
             this.lblGoogleWork = new System.Windows.Forms.Label();
             this.txtGoogleWork = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.btnDeleteWork = new System.Windows.Forms.Button();
             this.panelAuthor = new System.Windows.Forms.Panel();
             this.dgvAuthor = new System.Windows.Forms.DataGridView();
             this.btnDeleteAuthor = new System.Windows.Forms.Button();
             this.lblNameAuthor = new System.Windows.Forms.Label();
             this.btnChangeAuthor = new System.Windows.Forms.Button();
             this.btnGoogleAuthor = new System.Windows.Forms.Button();
-            this.lblStartAuthor = new System.Windows.Forms.Label();
             this.btnEditAuthor = new System.Windows.Forms.Button();
             this.btnAddAuthor = new System.Windows.Forms.Button();
             this.txtIDAuthor = new System.Windows.Forms.TextBox();
@@ -154,43 +143,38 @@
             this.lblGoogleAuthor = new System.Windows.Forms.Label();
             this.txtNameAuthor = new System.Windows.Forms.TextBox();
             this.txtGoogleAuthor = new System.Windows.Forms.TextBox();
-            this.txtGoogleAuthor2 = new System.Windows.Forms.TextBox();
             this.panelGenre = new System.Windows.Forms.Panel();
             this.dgvGenre = new System.Windows.Forms.DataGridView();
             this.btnDeleteGenre = new System.Windows.Forms.Button();
             this.lblNameGenre = new System.Windows.Forms.Label();
             this.btnChangeGenre = new System.Windows.Forms.Button();
             this.btnGoogleGenre = new System.Windows.Forms.Button();
-            this.lblStartGenre = new System.Windows.Forms.Label();
             this.btnEditGenre = new System.Windows.Forms.Button();
             this.btnAddGenre = new System.Windows.Forms.Button();
             this.txtIDGenre = new System.Windows.Forms.TextBox();
             this.lblIDGenre = new System.Windows.Forms.Label();
             this.lblGoogleGenre = new System.Windows.Forms.Label();
             this.txtNameGenre = new System.Windows.Forms.TextBox();
-            this.txtGoogleGenre2 = new System.Windows.Forms.TextBox();
             this.txtGoogleGenre = new System.Windows.Forms.TextBox();
             this.panelPub = new System.Windows.Forms.Panel();
-            this.dgvPub = new System.Windows.Forms.DataGridView();
             this.btnDeletePub = new System.Windows.Forms.Button();
             this.lblNamePub = new System.Windows.Forms.Label();
             this.btnChangePub = new System.Windows.Forms.Button();
             this.btnGooglePub = new System.Windows.Forms.Button();
-            this.lblStartPub = new System.Windows.Forms.Label();
             this.btnEditPub = new System.Windows.Forms.Button();
             this.btnAddPub = new System.Windows.Forms.Button();
             this.txtIDPub = new System.Windows.Forms.TextBox();
             this.lblIDPub = new System.Windows.Forms.Label();
             this.lblGooglePub = new System.Windows.Forms.Label();
             this.txtNamePub = new System.Windows.Forms.TextBox();
-            this.txtGooglePub2 = new System.Windows.Forms.TextBox();
             this.txtGooglePub = new System.Windows.Forms.TextBox();
+            this.dgvPub = new System.Windows.Forms.DataGridView();
             this.panelSafe = new System.Windows.Forms.Panel();
+            this.dgvSafe = new System.Windows.Forms.DataGridView();
             this.btnDeleteSafe = new System.Windows.Forms.Button();
             this.lblNameSafe = new System.Windows.Forms.Label();
             this.btnChangeSafe = new System.Windows.Forms.Button();
             this.btnGoogleSafe = new System.Windows.Forms.Button();
-            this.lblStartSafe = new System.Windows.Forms.Label();
             this.btnEditSafe = new System.Windows.Forms.Button();
             this.btnAddSafe = new System.Windows.Forms.Button();
             this.txtIDSafe = new System.Windows.Forms.TextBox();
@@ -198,19 +182,15 @@
             this.lblGoogleSafe = new System.Windows.Forms.Label();
             this.txtNameSafe = new System.Windows.Forms.TextBox();
             this.txtGoogleSafe = new System.Windows.Forms.TextBox();
-            this.txtGoogleSafe2 = new System.Windows.Forms.TextBox();
-            this.dgvSafe = new System.Windows.Forms.DataGridView();
             this.panelNew = new System.Windows.Forms.Panel();
             this.txtPostNew = new System.Windows.Forms.TextBox();
             this.txtDeliveryNew = new System.Windows.Forms.TextBox();
             this.lblDeliveryNew = new System.Windows.Forms.Label();
             this.lblPriceNew = new System.Windows.Forms.Label();
             this.lblPostNew = new System.Windows.Forms.Label();
-            this.btnDeleteNew = new System.Windows.Forms.Button();
             this.lblEmployeeNew = new System.Windows.Forms.Label();
             this.btnChangeNew = new System.Windows.Forms.Button();
             this.btnGoogleNew = new System.Windows.Forms.Button();
-            this.lblStartNew = new System.Windows.Forms.Label();
             this.btnEditNew = new System.Windows.Forms.Button();
             this.cbEmployeeNew = new System.Windows.Forms.ComboBox();
             this.txtIDExemplar = new System.Windows.Forms.TextBox();
@@ -219,18 +199,16 @@
             this.txtIDNew = new System.Windows.Forms.TextBox();
             this.lblIDNew = new System.Windows.Forms.Label();
             this.lblGoogleNew = new System.Windows.Forms.Label();
-            this.dgvNew = new System.Windows.Forms.DataGridView();
-            this.txtGoogleNew = new System.Windows.Forms.TextBox();
-            this.txtGoogleNew2 = new System.Windows.Forms.TextBox();
             this.txtPriceNew = new System.Windows.Forms.TextBox();
+            this.txtGoogleNew = new System.Windows.Forms.TextBox();
+            this.dgvNew = new System.Windows.Forms.DataGridView();
+            this.btnDeleteNew = new System.Windows.Forms.Button();
             this.panelOut = new System.Windows.Forms.Panel();
             this.txtWhy = new System.Windows.Forms.TextBox();
             this.lblWhy = new System.Windows.Forms.Label();
-            this.btnDeleteOut = new System.Windows.Forms.Button();
             this.lblEmployeeOut = new System.Windows.Forms.Label();
             this.btnChangeOut = new System.Windows.Forms.Button();
             this.btnGoogleOut = new System.Windows.Forms.Button();
-            this.lblStartOut = new System.Windows.Forms.Label();
             this.btnEditOut = new System.Windows.Forms.Button();
             this.cbEmployeeOut = new System.Windows.Forms.ComboBox();
             this.txtIDExemplarOut = new System.Windows.Forms.TextBox();
@@ -239,9 +217,9 @@
             this.txtIDOut = new System.Windows.Forms.TextBox();
             this.lblIDOut = new System.Windows.Forms.Label();
             this.lblGoogleOut = new System.Windows.Forms.Label();
-            this.dgvOut = new System.Windows.Forms.DataGridView();
             this.txtGoogleOut = new System.Windows.Forms.TextBox();
-            this.txtGoogleOut2 = new System.Windows.Forms.TextBox();
+            this.dgvOut = new System.Windows.Forms.DataGridView();
+            this.btnDeleteOut = new System.Windows.Forms.Button();
             this.panelExemplar = new System.Windows.Forms.Panel();
             this.dgvExemplar = new System.Windows.Forms.DataGridView();
             this.lblWork = new System.Windows.Forms.Label();
@@ -265,8 +243,6 @@
             this.panelContent.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvContent)).BeginInit();
             this.menuStrip1.SuspendLayout();
-            this.panelListBook.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvListBook)).BeginInit();
             this.panelWork.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvWork)).BeginInit();
             this.panelAuthor.SuspendLayout();
@@ -287,7 +263,7 @@
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(400, 85);
+            this.btnAdd.Location = new System.Drawing.Point(393, 77);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(75, 23);
             this.btnAdd.TabIndex = 48;
@@ -301,7 +277,6 @@
             this.panelBooks.Controls.Add(this.label6);
             this.panelBooks.Controls.Add(this.btnChangeBook);
             this.panelBooks.Controls.Add(this.btnListBook);
-            this.panelBooks.Controls.Add(this.label13);
             this.panelBooks.Controls.Add(this.btnEditBook);
             this.panelBooks.Controls.Add(this.cbPublisher);
             this.panelBooks.Controls.Add(this.txtBook);
@@ -310,20 +285,33 @@
             this.panelBooks.Controls.Add(this.label5);
             this.panelBooks.Controls.Add(this.label4);
             this.panelBooks.Controls.Add(this.txtID_Book);
-            this.panelBooks.Controls.Add(this.label2);
-            this.panelBooks.Controls.Add(this.txtGoogleBook);
             this.panelBooks.Controls.Add(this.label1);
             this.panelBooks.Controls.Add(this.lblGoogleBook);
+            this.panelBooks.Controls.Add(this.txtGoogleBook);
+            this.panelBooks.Controls.Add(this.btnDeleteBook);
             this.panelBooks.Location = new System.Drawing.Point(12, 27);
             this.panelBooks.Name = "panelBooks";
             this.panelBooks.Size = new System.Drawing.Size(478, 222);
             this.panelBooks.TabIndex = 58;
             this.panelBooks.Visible = false;
             // 
+            // dgvBooks
+            // 
+            this.dgvBooks.AllowUserToAddRows = false;
+            this.dgvBooks.AllowUserToDeleteRows = false;
+            this.dgvBooks.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvBooks.Location = new System.Drawing.Point(17, 42);
+            this.dgvBooks.Name = "dgvBooks";
+            this.dgvBooks.ReadOnly = true;
+            this.dgvBooks.Size = new System.Drawing.Size(458, 148);
+            this.dgvBooks.TabIndex = 51;
+            this.dgvBooks.Visible = false;
+            this.dgvBooks.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvBooks_CellContentClick);
+            // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(25, 26);
+            this.label6.Location = new System.Drawing.Point(26, 95);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(82, 13);
             this.label6.TabIndex = 66;
@@ -349,18 +337,9 @@
             this.btnListBook.UseVisualStyleBackColor = true;
             this.btnListBook.Click += new System.EventHandler(this.btnListBook_Click);
             // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(52, 0);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(283, 13);
-            this.label13.TabIndex = 61;
-            this.label13.Text = "Выберите книгу, которую Вы хотите отредактировать:";
-            // 
             // btnEditBook
             // 
-            this.btnEditBook.Location = new System.Drawing.Point(393, 151);
+            this.btnEditBook.Location = new System.Drawing.Point(393, 144);
             this.btnEditBook.Name = "btnEditBook";
             this.btnEditBook.Size = new System.Drawing.Size(75, 23);
             this.btnEditBook.TabIndex = 58;
@@ -371,14 +350,14 @@
             // cbPublisher
             // 
             this.cbPublisher.FormattingEnabled = true;
-            this.cbPublisher.Location = new System.Drawing.Point(150, 20);
+            this.cbPublisher.Location = new System.Drawing.Point(150, 88);
             this.cbPublisher.Name = "cbPublisher";
             this.cbPublisher.Size = new System.Drawing.Size(121, 21);
             this.cbPublisher.TabIndex = 57;
             // 
             // txtBook
             // 
-            this.txtBook.Location = new System.Drawing.Point(150, 52);
+            this.txtBook.Location = new System.Drawing.Point(150, 118);
             this.txtBook.Name = "txtBook";
             this.txtBook.Size = new System.Drawing.Size(121, 20);
             this.txtBook.TabIndex = 56;
@@ -386,7 +365,7 @@
             // cbGenre
             // 
             this.cbGenre.FormattingEnabled = true;
-            this.cbGenre.Location = new System.Drawing.Point(150, 77);
+            this.cbGenre.Location = new System.Drawing.Point(150, 146);
             this.cbGenre.Name = "cbGenre";
             this.cbGenre.Size = new System.Drawing.Size(121, 21);
             this.cbGenre.TabIndex = 55;
@@ -394,7 +373,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(25, 52);
+            this.label5.Location = new System.Drawing.Point(26, 125);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(118, 13);
             this.label5.TabIndex = 54;
@@ -403,7 +382,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(25, 85);
+            this.label4.Location = new System.Drawing.Point(26, 154);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(39, 13);
             this.label4.TabIndex = 53;
@@ -411,19 +390,29 @@
             // 
             // txtID_Book
             // 
-            this.txtID_Book.Location = new System.Drawing.Point(150, 58);
+            this.txtID_Book.Location = new System.Drawing.Point(150, 59);
             this.txtID_Book.Name = "txtID_Book";
             this.txtID_Book.Size = new System.Drawing.Size(121, 20);
             this.txtID_Book.TabIndex = 64;
             // 
-            // label2
+            // label1
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(25, 52);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(70, 13);
-            this.label2.TabIndex = 52;
-            this.label2.Text = "Публикатор:";
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(26, 66);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(61, 13);
+            this.label1.TabIndex = 65;
+            this.label1.Text = "Код книги:";
+            this.label1.Visible = false;
+            // 
+            // lblGoogleBook
+            // 
+            this.lblGoogleBook.AutoSize = true;
+            this.lblGoogleBook.Location = new System.Drawing.Point(22, 18);
+            this.lblGoogleBook.Name = "lblGoogleBook";
+            this.lblGoogleBook.Size = new System.Drawing.Size(72, 13);
+            this.lblGoogleBook.TabIndex = 60;
+            this.lblGoogleBook.Text = "Найти книгу:";
             // 
             // txtGoogleBook
             // 
@@ -433,34 +422,15 @@
             this.txtGoogleBook.TabIndex = 59;
             this.txtGoogleBook.TextChanged += new System.EventHandler(this.txtGoogleBook_TextChanged);
             // 
-            // label1
+            // btnDeleteBook
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(25, 29);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(61, 13);
-            this.label1.TabIndex = 65;
-            this.label1.Text = "Код книги:";
-            // 
-            // lblGoogleBook
-            // 
-            this.lblGoogleBook.AutoSize = true;
-            this.lblGoogleBook.Location = new System.Drawing.Point(14, 15);
-            this.lblGoogleBook.Name = "lblGoogleBook";
-            this.lblGoogleBook.Size = new System.Drawing.Size(72, 13);
-            this.lblGoogleBook.TabIndex = 60;
-            this.lblGoogleBook.Text = "Найти книгу:";
-            // 
-            // dgvBooks
-            // 
-            this.dgvBooks.AllowUserToAddRows = false;
-            this.dgvBooks.AllowUserToDeleteRows = false;
-            this.dgvBooks.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvBooks.Location = new System.Drawing.Point(17, 42);
-            this.dgvBooks.Name = "dgvBooks";
-            this.dgvBooks.Size = new System.Drawing.Size(458, 148);
-            this.dgvBooks.TabIndex = 51;
-            this.dgvBooks.Visible = false;
+            this.btnDeleteBook.Location = new System.Drawing.Point(393, 196);
+            this.btnDeleteBook.Name = "btnDeleteBook";
+            this.btnDeleteBook.Size = new System.Drawing.Size(75, 23);
+            this.btnDeleteBook.TabIndex = 66;
+            this.btnDeleteBook.Text = "Удалить";
+            this.btnDeleteBook.UseVisualStyleBackColor = true;
+            this.btnDeleteBook.Click += new System.EventHandler(this.btnDeleteBook_Click);
             // 
             // panelContent
             // 
@@ -475,17 +445,29 @@
             this.panelContent.Controls.Add(this.lblWorkContent);
             this.panelContent.Controls.Add(this.btnChangeContent);
             this.panelContent.Controls.Add(this.btnGoogleContent);
-            this.panelContent.Controls.Add(this.lblStartContent);
             this.panelContent.Controls.Add(this.btnEditContent);
             this.panelContent.Controls.Add(this.btnAddContent);
             this.panelContent.Controls.Add(this.lblBookContent);
             this.panelContent.Controls.Add(this.lblGoogleContent);
             this.panelContent.Controls.Add(this.txtGoogleContent);
-            this.panelContent.Location = new System.Drawing.Point(1155, 29);
+            this.panelContent.Location = new System.Drawing.Point(979, 255);
             this.panelContent.Name = "panelContent";
             this.panelContent.Size = new System.Drawing.Size(366, 222);
             this.panelContent.TabIndex = 69;
             this.panelContent.Visible = false;
+            // 
+            // dgvContent
+            // 
+            this.dgvContent.AllowUserToAddRows = false;
+            this.dgvContent.AllowUserToDeleteRows = false;
+            this.dgvContent.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvContent.Location = new System.Drawing.Point(9, 42);
+            this.dgvContent.Name = "dgvContent";
+            this.dgvContent.ReadOnly = true;
+            this.dgvContent.Size = new System.Drawing.Size(348, 148);
+            this.dgvContent.TabIndex = 51;
+            this.dgvContent.Visible = false;
+            this.dgvContent.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvContent_CellContentClick);
             // 
             // label10
             // 
@@ -584,15 +566,6 @@
             this.btnGoogleContent.UseVisualStyleBackColor = true;
             this.btnGoogleContent.Click += new System.EventHandler(this.btnGoogleContent_Click);
             // 
-            // lblStartContent
-            // 
-            this.lblStartContent.AutoSize = true;
-            this.lblStartContent.Location = new System.Drawing.Point(83, 2);
-            this.lblStartContent.Name = "lblStartContent";
-            this.lblStartContent.Size = new System.Drawing.Size(133, 13);
-            this.lblStartContent.TabIndex = 61;
-            this.lblStartContent.Text = "Выберите издательство:";
-            // 
             // btnEditContent
             // 
             this.btnEditContent.Location = new System.Drawing.Point(272, 108);
@@ -639,19 +612,6 @@
             this.txtGoogleContent.TabIndex = 68;
             this.txtGoogleContent.TextChanged += new System.EventHandler(this.txtGoogleContent_TextChanged);
             // 
-            // dgvContent
-            // 
-            this.dgvContent.AllowUserToAddRows = false;
-            this.dgvContent.AllowUserToDeleteRows = false;
-            this.dgvContent.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvContent.Location = new System.Drawing.Point(9, 42);
-            this.dgvContent.Name = "dgvContent";
-            this.dgvContent.ReadOnly = true;
-            this.dgvContent.Size = new System.Drawing.Size(348, 148);
-            this.dgvContent.TabIndex = 51;
-            this.dgvContent.Visible = false;
-            this.dgvContent.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvContent_CellContentClick);
-            // 
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -662,7 +622,7 @@
             this.mnuClose});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1362, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1354, 24);
             this.menuStrip1.TabIndex = 59;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -1077,75 +1037,12 @@
             this.mnuClose.Text = "Назад";
             this.mnuClose.Click += new System.EventHandler(this.mnuClose_Click);
             // 
-            // panelListBook
-            // 
-            this.panelListBook.Controls.Add(this.btnDeleteBook);
-            this.panelListBook.Controls.Add(this.button2);
-            this.panelListBook.Controls.Add(this.txtGoogleListBook);
-            this.panelListBook.Controls.Add(this.label3);
-            this.panelListBook.Controls.Add(this.dgvListBook);
-            this.panelListBook.Location = new System.Drawing.Point(12, 255);
-            this.panelListBook.Name = "panelListBook";
-            this.panelListBook.Size = new System.Drawing.Size(478, 229);
-            this.panelListBook.TabIndex = 60;
-            // 
-            // btnDeleteBook
-            // 
-            this.btnDeleteBook.Location = new System.Drawing.Point(403, 196);
-            this.btnDeleteBook.Name = "btnDeleteBook";
-            this.btnDeleteBook.Size = new System.Drawing.Size(75, 23);
-            this.btnDeleteBook.TabIndex = 66;
-            this.btnDeleteBook.Text = "Удалить";
-            this.btnDeleteBook.UseVisualStyleBackColor = true;
-            this.btnDeleteBook.Click += new System.EventHandler(this.btnDeleteBook_Click);
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(393, 15);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 62;
-            this.button2.Text = "Список";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // txtGoogleListBook
-            // 
-            this.txtGoogleListBook.Location = new System.Drawing.Point(99, 15);
-            this.txtGoogleListBook.Name = "txtGoogleListBook";
-            this.txtGoogleListBook.Size = new System.Drawing.Size(286, 20);
-            this.txtGoogleListBook.TabIndex = 59;
-            this.txtGoogleListBook.TextChanged += new System.EventHandler(this.txtGoogleListBook_TextChanged);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(14, 15);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(72, 13);
-            this.label3.TabIndex = 60;
-            this.label3.Text = "Найти книгу:";
-            // 
-            // dgvListBook
-            // 
-            this.dgvListBook.AllowUserToAddRows = false;
-            this.dgvListBook.AllowUserToDeleteRows = false;
-            this.dgvListBook.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvListBook.Location = new System.Drawing.Point(17, 42);
-            this.dgvListBook.Name = "dgvListBook";
-            this.dgvListBook.Size = new System.Drawing.Size(458, 148);
-            this.dgvListBook.TabIndex = 51;
-            this.dgvListBook.Visible = false;
-            this.dgvListBook.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvListBook_CellContentClick);
-            // 
             // panelWork
             // 
             this.panelWork.Controls.Add(this.dgvWork);
-            this.panelWork.Controls.Add(this.btnDeleteWork);
-            this.panelWork.Controls.Add(this.label7);
             this.panelWork.Controls.Add(this.btnChangeWork);
+            this.panelWork.Controls.Add(this.label7);
             this.panelWork.Controls.Add(this.btnGoogleWork);
-            this.panelWork.Controls.Add(this.label8);
             this.panelWork.Controls.Add(this.btnEditWork);
             this.panelWork.Controls.Add(this.cbAuthor);
             this.panelWork.Controls.Add(this.txtNameWork);
@@ -1155,7 +1052,7 @@
             this.panelWork.Controls.Add(this.label12);
             this.panelWork.Controls.Add(this.lblGoogleWork);
             this.panelWork.Controls.Add(this.txtGoogleWork);
-            this.panelWork.Controls.Add(this.textBox1);
+            this.panelWork.Controls.Add(this.btnDeleteWork);
             this.panelWork.Location = new System.Drawing.Point(496, 27);
             this.panelWork.Name = "panelWork";
             this.panelWork.Size = new System.Drawing.Size(366, 222);
@@ -1174,26 +1071,6 @@
             this.dgvWork.Visible = false;
             this.dgvWork.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvWork_CellContentClick);
             // 
-            // btnDeleteWork
-            // 
-            this.btnDeleteWork.Location = new System.Drawing.Point(283, 196);
-            this.btnDeleteWork.Name = "btnDeleteWork";
-            this.btnDeleteWork.Size = new System.Drawing.Size(75, 23);
-            this.btnDeleteWork.TabIndex = 67;
-            this.btnDeleteWork.Text = "Удалить";
-            this.btnDeleteWork.UseVisualStyleBackColor = true;
-            this.btnDeleteWork.Visible = false;
-            this.btnDeleteWork.Click += new System.EventHandler(this.btnDeleteWork_Click);
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(13, 93);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(40, 13);
-            this.label7.TabIndex = 66;
-            this.label7.Text = "Автор:";
-            // 
             // btnChangeWork
             // 
             this.btnChangeWork.Location = new System.Drawing.Point(282, 196);
@@ -1205,6 +1082,15 @@
             this.btnChangeWork.Visible = false;
             this.btnChangeWork.Click += new System.EventHandler(this.btnChangeWork_Click);
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(13, 93);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(40, 13);
+            this.label7.TabIndex = 66;
+            this.label7.Text = "Автор:";
+            // 
             // btnGoogleWork
             // 
             this.btnGoogleWork.Location = new System.Drawing.Point(289, 15);
@@ -1214,15 +1100,6 @@
             this.btnGoogleWork.Text = "Список";
             this.btnGoogleWork.UseVisualStyleBackColor = true;
             this.btnGoogleWork.Click += new System.EventHandler(this.btnGoogleWork_Click);
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(22, -3);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(326, 13);
-            this.label8.TabIndex = 61;
-            this.label8.Text = "Выберите произведение, которое Вы хотите отредактировать:";
             // 
             // btnEditWork
             // 
@@ -1301,13 +1178,16 @@
             this.txtGoogleWork.TabIndex = 59;
             this.txtGoogleWork.TextChanged += new System.EventHandler(this.txtGoogleWork_TextChanged);
             // 
-            // textBox1
+            // btnDeleteWork
             // 
-            this.textBox1.Location = new System.Drawing.Point(120, 17);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(163, 20);
-            this.textBox1.TabIndex = 68;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.btnDeleteWork.Location = new System.Drawing.Point(283, 196);
+            this.btnDeleteWork.Name = "btnDeleteWork";
+            this.btnDeleteWork.Size = new System.Drawing.Size(75, 23);
+            this.btnDeleteWork.TabIndex = 67;
+            this.btnDeleteWork.Text = "Удалить";
+            this.btnDeleteWork.UseVisualStyleBackColor = true;
+            this.btnDeleteWork.Visible = false;
+            this.btnDeleteWork.Click += new System.EventHandler(this.btnDeleteWork_Click);
             // 
             // panelAuthor
             // 
@@ -1316,7 +1196,6 @@
             this.panelAuthor.Controls.Add(this.lblNameAuthor);
             this.panelAuthor.Controls.Add(this.btnChangeAuthor);
             this.panelAuthor.Controls.Add(this.btnGoogleAuthor);
-            this.panelAuthor.Controls.Add(this.lblStartAuthor);
             this.panelAuthor.Controls.Add(this.btnEditAuthor);
             this.panelAuthor.Controls.Add(this.btnAddAuthor);
             this.panelAuthor.Controls.Add(this.txtIDAuthor);
@@ -1324,8 +1203,7 @@
             this.panelAuthor.Controls.Add(this.lblGoogleAuthor);
             this.panelAuthor.Controls.Add(this.txtNameAuthor);
             this.panelAuthor.Controls.Add(this.txtGoogleAuthor);
-            this.panelAuthor.Controls.Add(this.txtGoogleAuthor2);
-            this.panelAuthor.Location = new System.Drawing.Point(496, 255);
+            this.panelAuthor.Location = new System.Drawing.Point(12, 483);
             this.panelAuthor.Name = "panelAuthor";
             this.panelAuthor.Size = new System.Drawing.Size(281, 222);
             this.panelAuthor.TabIndex = 62;
@@ -1385,15 +1263,6 @@
             this.btnGoogleAuthor.UseVisualStyleBackColor = true;
             this.btnGoogleAuthor.Click += new System.EventHandler(this.btnGoogleAuthor_Click);
             // 
-            // lblStartAuthor
-            // 
-            this.lblStartAuthor.AutoSize = true;
-            this.lblStartAuthor.Location = new System.Drawing.Point(83, 2);
-            this.lblStartAuthor.Name = "lblStartAuthor";
-            this.lblStartAuthor.Size = new System.Drawing.Size(135, 13);
-            this.lblStartAuthor.TabIndex = 61;
-            this.lblStartAuthor.Text = "Выберите произведение:";
-            // 
             // btnEditAuthor
             // 
             this.btnEditAuthor.Location = new System.Drawing.Point(142, 108);
@@ -1435,9 +1304,9 @@
             this.lblGoogleAuthor.AutoSize = true;
             this.lblGoogleAuthor.Location = new System.Drawing.Point(7, 21);
             this.lblGoogleAuthor.Name = "lblGoogleAuthor";
-            this.lblGoogleAuthor.Size = new System.Drawing.Size(110, 13);
+            this.lblGoogleAuthor.Size = new System.Drawing.Size(79, 13);
             this.lblGoogleAuthor.TabIndex = 60;
-            this.lblGoogleAuthor.Text = "Найти произвдение:";
+            this.lblGoogleAuthor.Text = "Найти автора:";
             // 
             // txtNameAuthor
             // 
@@ -1448,19 +1317,11 @@
             // 
             // txtGoogleAuthor
             // 
-            this.txtGoogleAuthor.Location = new System.Drawing.Point(120, 18);
+            this.txtGoogleAuthor.Location = new System.Drawing.Point(92, 18);
             this.txtGoogleAuthor.Name = "txtGoogleAuthor";
-            this.txtGoogleAuthor.Size = new System.Drawing.Size(77, 20);
+            this.txtGoogleAuthor.Size = new System.Drawing.Size(105, 20);
             this.txtGoogleAuthor.TabIndex = 59;
             this.txtGoogleAuthor.TextChanged += new System.EventHandler(this.txtGoogleAuthor_TextChanged);
-            // 
-            // txtGoogleAuthor2
-            // 
-            this.txtGoogleAuthor2.Location = new System.Drawing.Point(120, 18);
-            this.txtGoogleAuthor2.Name = "txtGoogleAuthor2";
-            this.txtGoogleAuthor2.Size = new System.Drawing.Size(77, 20);
-            this.txtGoogleAuthor2.TabIndex = 68;
-            this.txtGoogleAuthor2.TextChanged += new System.EventHandler(this.txtGoogleAuthor2_TextChanged);
             // 
             // panelGenre
             // 
@@ -1469,16 +1330,14 @@
             this.panelGenre.Controls.Add(this.lblNameGenre);
             this.panelGenre.Controls.Add(this.btnChangeGenre);
             this.panelGenre.Controls.Add(this.btnGoogleGenre);
-            this.panelGenre.Controls.Add(this.lblStartGenre);
             this.panelGenre.Controls.Add(this.btnEditGenre);
             this.panelGenre.Controls.Add(this.btnAddGenre);
             this.panelGenre.Controls.Add(this.txtIDGenre);
             this.panelGenre.Controls.Add(this.lblIDGenre);
             this.panelGenre.Controls.Add(this.lblGoogleGenre);
             this.panelGenre.Controls.Add(this.txtNameGenre);
-            this.panelGenre.Controls.Add(this.txtGoogleGenre2);
             this.panelGenre.Controls.Add(this.txtGoogleGenre);
-            this.panelGenre.Location = new System.Drawing.Point(785, 257);
+            this.panelGenre.Location = new System.Drawing.Point(299, 483);
             this.panelGenre.Name = "panelGenre";
             this.panelGenre.Size = new System.Drawing.Size(281, 222);
             this.panelGenre.TabIndex = 63;
@@ -1538,15 +1397,6 @@
             this.btnGoogleGenre.UseVisualStyleBackColor = true;
             this.btnGoogleGenre.Click += new System.EventHandler(this.btnGoogleGenre_Click);
             // 
-            // lblStartGenre
-            // 
-            this.lblStartGenre.AutoSize = true;
-            this.lblStartGenre.Location = new System.Drawing.Point(83, 2);
-            this.lblStartGenre.Name = "lblStartGenre";
-            this.lblStartGenre.Size = new System.Drawing.Size(89, 13);
-            this.lblStartGenre.TabIndex = 61;
-            this.lblStartGenre.Text = "Выберите жанр:";
-            // 
             // btnEditGenre
             // 
             this.btnEditGenre.Location = new System.Drawing.Point(142, 108);
@@ -1588,9 +1438,9 @@
             this.lblGoogleGenre.AutoSize = true;
             this.lblGoogleGenre.Location = new System.Drawing.Point(7, 21);
             this.lblGoogleGenre.Name = "lblGoogleGenre";
-            this.lblGoogleGenre.Size = new System.Drawing.Size(110, 13);
+            this.lblGoogleGenre.Size = new System.Drawing.Size(70, 13);
             this.lblGoogleGenre.TabIndex = 60;
-            this.lblGoogleGenre.Text = "Найти произвдение:";
+            this.lblGoogleGenre.Text = "Найти жанр:";
             // 
             // txtNameGenre
             // 
@@ -1599,19 +1449,11 @@
             this.txtNameGenre.Size = new System.Drawing.Size(121, 20);
             this.txtNameGenre.TabIndex = 56;
             // 
-            // txtGoogleGenre2
-            // 
-            this.txtGoogleGenre2.Location = new System.Drawing.Point(120, 18);
-            this.txtGoogleGenre2.Name = "txtGoogleGenre2";
-            this.txtGoogleGenre2.Size = new System.Drawing.Size(77, 20);
-            this.txtGoogleGenre2.TabIndex = 59;
-            this.txtGoogleGenre2.TextChanged += new System.EventHandler(this.txtGoogleGenre2_TextChanged);
-            // 
             // txtGoogleGenre
             // 
-            this.txtGoogleGenre.Location = new System.Drawing.Point(120, 18);
+            this.txtGoogleGenre.Location = new System.Drawing.Point(79, 18);
             this.txtGoogleGenre.Name = "txtGoogleGenre";
-            this.txtGoogleGenre.Size = new System.Drawing.Size(77, 20);
+            this.txtGoogleGenre.Size = new System.Drawing.Size(118, 20);
             this.txtGoogleGenre.TabIndex = 68;
             this.txtGoogleGenre.TextChanged += new System.EventHandler(this.txtGoogleGenre_TextChanged);
             // 
@@ -1622,33 +1464,18 @@
             this.panelPub.Controls.Add(this.lblNamePub);
             this.panelPub.Controls.Add(this.btnChangePub);
             this.panelPub.Controls.Add(this.btnGooglePub);
-            this.panelPub.Controls.Add(this.lblStartPub);
             this.panelPub.Controls.Add(this.btnEditPub);
             this.panelPub.Controls.Add(this.btnAddPub);
             this.panelPub.Controls.Add(this.txtIDPub);
             this.panelPub.Controls.Add(this.lblIDPub);
             this.panelPub.Controls.Add(this.lblGooglePub);
             this.panelPub.Controls.Add(this.txtNamePub);
-            this.panelPub.Controls.Add(this.txtGooglePub2);
             this.panelPub.Controls.Add(this.txtGooglePub);
             this.panelPub.Location = new System.Drawing.Point(868, 27);
             this.panelPub.Name = "panelPub";
             this.panelPub.Size = new System.Drawing.Size(281, 222);
             this.panelPub.TabIndex = 64;
             this.panelPub.Visible = false;
-            // 
-            // dgvPub
-            // 
-            this.dgvPub.AllowUserToAddRows = false;
-            this.dgvPub.AllowUserToDeleteRows = false;
-            this.dgvPub.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPub.Location = new System.Drawing.Point(9, 42);
-            this.dgvPub.Name = "dgvPub";
-            this.dgvPub.ReadOnly = true;
-            this.dgvPub.Size = new System.Drawing.Size(266, 148);
-            this.dgvPub.TabIndex = 51;
-            this.dgvPub.Visible = false;
-            this.dgvPub.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPub_CellContentClick);
             // 
             // btnDeletePub
             // 
@@ -1666,9 +1493,9 @@
             this.lblNamePub.AutoSize = true;
             this.lblNamePub.Location = new System.Drawing.Point(13, 90);
             this.lblNamePub.Name = "lblNamePub";
-            this.lblNamePub.Size = new System.Drawing.Size(39, 13);
+            this.lblNamePub.Size = new System.Drawing.Size(82, 13);
             this.lblNamePub.TabIndex = 66;
-            this.lblNamePub.Text = "Жанр:";
+            this.lblNamePub.Text = "Издательство:";
             // 
             // btnChangePub
             // 
@@ -1691,18 +1518,9 @@
             this.btnGooglePub.UseVisualStyleBackColor = true;
             this.btnGooglePub.Click += new System.EventHandler(this.btnGooglePub_Click);
             // 
-            // lblStartPub
-            // 
-            this.lblStartPub.AutoSize = true;
-            this.lblStartPub.Location = new System.Drawing.Point(83, 2);
-            this.lblStartPub.Name = "lblStartPub";
-            this.lblStartPub.Size = new System.Drawing.Size(133, 13);
-            this.lblStartPub.TabIndex = 61;
-            this.lblStartPub.Text = "Выберите издательство:";
-            // 
             // btnEditPub
             // 
-            this.btnEditPub.Location = new System.Drawing.Point(142, 108);
+            this.btnEditPub.Location = new System.Drawing.Point(121, 167);
             this.btnEditPub.Name = "btnEditPub";
             this.btnEditPub.Size = new System.Drawing.Size(76, 23);
             this.btnEditPub.TabIndex = 58;
@@ -1712,7 +1530,7 @@
             // 
             // btnAddPub
             // 
-            this.btnAddPub.Location = new System.Drawing.Point(142, 47);
+            this.btnAddPub.Location = new System.Drawing.Point(200, 167);
             this.btnAddPub.Name = "btnAddPub";
             this.btnAddPub.Size = new System.Drawing.Size(76, 23);
             this.btnAddPub.TabIndex = 48;
@@ -1732,18 +1550,18 @@
             this.lblIDPub.AutoSize = true;
             this.lblIDPub.Location = new System.Drawing.Point(13, 61);
             this.lblIDPub.Name = "lblIDPub";
-            this.lblIDPub.Size = new System.Drawing.Size(64, 13);
+            this.lblIDPub.Size = new System.Drawing.Size(79, 13);
             this.lblIDPub.TabIndex = 65;
-            this.lblIDPub.Text = "Код жанра:";
+            this.lblIDPub.Text = "Код издателя:";
             // 
             // lblGooglePub
             // 
             this.lblGooglePub.AutoSize = true;
             this.lblGooglePub.Location = new System.Drawing.Point(7, 21);
             this.lblGooglePub.Name = "lblGooglePub";
-            this.lblGooglePub.Size = new System.Drawing.Size(110, 13);
+            this.lblGooglePub.Size = new System.Drawing.Size(91, 13);
             this.lblGooglePub.TabIndex = 60;
-            this.lblGooglePub.Text = "Найти произвдение:";
+            this.lblGooglePub.Text = "Найти издателя:";
             // 
             // txtNamePub
             // 
@@ -1752,21 +1570,26 @@
             this.txtNamePub.Size = new System.Drawing.Size(121, 20);
             this.txtNamePub.TabIndex = 56;
             // 
-            // txtGooglePub2
-            // 
-            this.txtGooglePub2.Location = new System.Drawing.Point(120, 18);
-            this.txtGooglePub2.Name = "txtGooglePub2";
-            this.txtGooglePub2.Size = new System.Drawing.Size(77, 20);
-            this.txtGooglePub2.TabIndex = 68;
-            this.txtGooglePub2.TextChanged += new System.EventHandler(this.txtGooglePub2_TextChanged);
-            // 
             // txtGooglePub
             // 
-            this.txtGooglePub.Location = new System.Drawing.Point(120, 18);
+            this.txtGooglePub.Location = new System.Drawing.Point(97, 18);
             this.txtGooglePub.Name = "txtGooglePub";
-            this.txtGooglePub.Size = new System.Drawing.Size(77, 20);
+            this.txtGooglePub.Size = new System.Drawing.Size(100, 20);
             this.txtGooglePub.TabIndex = 59;
             this.txtGooglePub.TextChanged += new System.EventHandler(this.txtGooglePub_TextChanged);
+            // 
+            // dgvPub
+            // 
+            this.dgvPub.AllowUserToAddRows = false;
+            this.dgvPub.AllowUserToDeleteRows = false;
+            this.dgvPub.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvPub.Location = new System.Drawing.Point(9, 42);
+            this.dgvPub.Name = "dgvPub";
+            this.dgvPub.ReadOnly = true;
+            this.dgvPub.Size = new System.Drawing.Size(266, 148);
+            this.dgvPub.TabIndex = 51;
+            this.dgvPub.Visible = false;
+            this.dgvPub.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPub_CellContentClick);
             // 
             // panelSafe
             // 
@@ -1775,7 +1598,6 @@
             this.panelSafe.Controls.Add(this.lblNameSafe);
             this.panelSafe.Controls.Add(this.btnChangeSafe);
             this.panelSafe.Controls.Add(this.btnGoogleSafe);
-            this.panelSafe.Controls.Add(this.lblStartSafe);
             this.panelSafe.Controls.Add(this.btnEditSafe);
             this.panelSafe.Controls.Add(this.btnAddSafe);
             this.panelSafe.Controls.Add(this.txtIDSafe);
@@ -1783,12 +1605,24 @@
             this.panelSafe.Controls.Add(this.lblGoogleSafe);
             this.panelSafe.Controls.Add(this.txtNameSafe);
             this.panelSafe.Controls.Add(this.txtGoogleSafe);
-            this.panelSafe.Controls.Add(this.txtGoogleSafe2);
-            this.panelSafe.Location = new System.Drawing.Point(1074, 257);
+            this.panelSafe.Location = new System.Drawing.Point(586, 483);
             this.panelSafe.Name = "panelSafe";
             this.panelSafe.Size = new System.Drawing.Size(281, 222);
             this.panelSafe.TabIndex = 65;
             this.panelSafe.Visible = false;
+            // 
+            // dgvSafe
+            // 
+            this.dgvSafe.AllowUserToAddRows = false;
+            this.dgvSafe.AllowUserToDeleteRows = false;
+            this.dgvSafe.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvSafe.Location = new System.Drawing.Point(9, 42);
+            this.dgvSafe.Name = "dgvSafe";
+            this.dgvSafe.ReadOnly = true;
+            this.dgvSafe.Size = new System.Drawing.Size(266, 148);
+            this.dgvSafe.TabIndex = 51;
+            this.dgvSafe.Visible = false;
+            this.dgvSafe.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSafe_CellContentClick);
             // 
             // btnDeleteSafe
             // 
@@ -1830,15 +1664,6 @@
             this.btnGoogleSafe.Text = "Список";
             this.btnGoogleSafe.UseVisualStyleBackColor = true;
             this.btnGoogleSafe.Click += new System.EventHandler(this.btnGoogleSafe_Click);
-            // 
-            // lblStartSafe
-            // 
-            this.lblStartSafe.AutoSize = true;
-            this.lblStartSafe.Location = new System.Drawing.Point(83, 2);
-            this.lblStartSafe.Name = "lblStartSafe";
-            this.lblStartSafe.Size = new System.Drawing.Size(119, 13);
-            this.lblStartSafe.TabIndex = 61;
-            this.lblStartSafe.Text = "Выберите хранилище:";
             // 
             // btnEditSafe
             // 
@@ -1900,27 +1725,6 @@
             this.txtGoogleSafe.TabIndex = 68;
             this.txtGoogleSafe.TextChanged += new System.EventHandler(this.txtGoogleSafe_TextChanged);
             // 
-            // txtGoogleSafe2
-            // 
-            this.txtGoogleSafe2.Location = new System.Drawing.Point(120, 18);
-            this.txtGoogleSafe2.Name = "txtGoogleSafe2";
-            this.txtGoogleSafe2.Size = new System.Drawing.Size(77, 20);
-            this.txtGoogleSafe2.TabIndex = 59;
-            this.txtGoogleSafe2.TextChanged += new System.EventHandler(this.txtGoogleSafe2_TextChanged);
-            // 
-            // dgvSafe
-            // 
-            this.dgvSafe.AllowUserToAddRows = false;
-            this.dgvSafe.AllowUserToDeleteRows = false;
-            this.dgvSafe.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvSafe.Location = new System.Drawing.Point(9, 42);
-            this.dgvSafe.Name = "dgvSafe";
-            this.dgvSafe.ReadOnly = true;
-            this.dgvSafe.Size = new System.Drawing.Size(266, 148);
-            this.dgvSafe.TabIndex = 51;
-            this.dgvSafe.Visible = false;
-            this.dgvSafe.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSafe_CellContentClick);
-            // 
             // panelNew
             // 
             this.panelNew.Controls.Add(this.dgvNew);
@@ -1929,11 +1733,9 @@
             this.panelNew.Controls.Add(this.lblDeliveryNew);
             this.panelNew.Controls.Add(this.lblPriceNew);
             this.panelNew.Controls.Add(this.lblPostNew);
-            this.panelNew.Controls.Add(this.btnDeleteNew);
             this.panelNew.Controls.Add(this.lblEmployeeNew);
             this.panelNew.Controls.Add(this.btnChangeNew);
             this.panelNew.Controls.Add(this.btnGoogleNew);
-            this.panelNew.Controls.Add(this.lblStartNew);
             this.panelNew.Controls.Add(this.btnEditNew);
             this.panelNew.Controls.Add(this.cbEmployeeNew);
             this.panelNew.Controls.Add(this.txtIDExemplar);
@@ -1942,10 +1744,10 @@
             this.panelNew.Controls.Add(this.txtIDNew);
             this.panelNew.Controls.Add(this.lblIDNew);
             this.panelNew.Controls.Add(this.lblGoogleNew);
-            this.panelNew.Controls.Add(this.txtGoogleNew);
-            this.panelNew.Controls.Add(this.txtGoogleNew2);
             this.panelNew.Controls.Add(this.txtPriceNew);
-            this.panelNew.Location = new System.Drawing.Point(12, 490);
+            this.panelNew.Controls.Add(this.txtGoogleNew);
+            this.panelNew.Controls.Add(this.btnDeleteNew);
+            this.panelNew.Location = new System.Drawing.Point(12, 255);
             this.panelNew.Name = "panelNew";
             this.panelNew.Size = new System.Drawing.Size(478, 222);
             this.panelNew.TabIndex = 66;
@@ -1992,17 +1794,6 @@
             this.lblPostNew.TabIndex = 69;
             this.lblPostNew.Text = "Как приобрели:";
             // 
-            // btnDeleteNew
-            // 
-            this.btnDeleteNew.Location = new System.Drawing.Point(196, 196);
-            this.btnDeleteNew.Name = "btnDeleteNew";
-            this.btnDeleteNew.Size = new System.Drawing.Size(75, 23);
-            this.btnDeleteNew.TabIndex = 67;
-            this.btnDeleteNew.Text = "Удалить";
-            this.btnDeleteNew.UseVisualStyleBackColor = true;
-            this.btnDeleteNew.Visible = false;
-            this.btnDeleteNew.Click += new System.EventHandler(this.btnDeleteNew_Click);
-            // 
             // lblEmployeeNew
             // 
             this.lblEmployeeNew.AutoSize = true;
@@ -2014,7 +1805,7 @@
             // 
             // btnChangeNew
             // 
-            this.btnChangeNew.Location = new System.Drawing.Point(282, 196);
+            this.btnChangeNew.Location = new System.Drawing.Point(393, 196);
             this.btnChangeNew.Name = "btnChangeNew";
             this.btnChangeNew.Size = new System.Drawing.Size(75, 23);
             this.btnChangeNew.TabIndex = 63;
@@ -2032,15 +1823,6 @@
             this.btnGoogleNew.Text = "Список";
             this.btnGoogleNew.UseVisualStyleBackColor = true;
             this.btnGoogleNew.Click += new System.EventHandler(this.btnGoogleNew_Click);
-            // 
-            // lblStartNew
-            // 
-            this.lblStartNew.AutoSize = true;
-            this.lblStartNew.Location = new System.Drawing.Point(22, -3);
-            this.lblStartNew.Name = "lblStartNew";
-            this.lblStartNew.Size = new System.Drawing.Size(326, 13);
-            this.lblStartNew.TabIndex = 61;
-            this.lblStartNew.Text = "Выберите произведение, которое Вы хотите отредактировать:";
             // 
             // btnEditNew
             // 
@@ -2069,7 +1851,7 @@
             // 
             // btnAddNew
             // 
-            this.btnAddNew.Location = new System.Drawing.Point(386, 86);
+            this.btnAddNew.Location = new System.Drawing.Point(311, 154);
             this.btnAddNew.Name = "btnAddNew";
             this.btnAddNew.Size = new System.Drawing.Size(76, 23);
             this.btnAddNew.TabIndex = 48;
@@ -2105,11 +1887,26 @@
             // lblGoogleNew
             // 
             this.lblGoogleNew.AutoSize = true;
-            this.lblGoogleNew.Location = new System.Drawing.Point(7, 21);
+            this.lblGoogleNew.Location = new System.Drawing.Point(16, 25);
             this.lblGoogleNew.Name = "lblGoogleNew";
-            this.lblGoogleNew.Size = new System.Drawing.Size(110, 13);
+            this.lblGoogleNew.Size = new System.Drawing.Size(72, 13);
             this.lblGoogleNew.TabIndex = 60;
-            this.lblGoogleNew.Text = "Найти произвдение:";
+            this.lblGoogleNew.Text = "Найти книгу:";
+            // 
+            // txtPriceNew
+            // 
+            this.txtPriceNew.Location = new System.Drawing.Point(341, 86);
+            this.txtPriceNew.Name = "txtPriceNew";
+            this.txtPriceNew.Size = new System.Drawing.Size(121, 20);
+            this.txtPriceNew.TabIndex = 73;
+            // 
+            // txtGoogleNew
+            // 
+            this.txtGoogleNew.Location = new System.Drawing.Point(120, 17);
+            this.txtGoogleNew.Name = "txtGoogleNew";
+            this.txtGoogleNew.Size = new System.Drawing.Size(267, 20);
+            this.txtGoogleNew.TabIndex = 68;
+            this.txtGoogleNew.TextChanged += new System.EventHandler(this.txtGoogleNew_TextChanged);
             // 
             // dgvNew
             // 
@@ -2123,39 +1920,25 @@
             this.dgvNew.Visible = false;
             this.dgvNew.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvNew_CellContentClick);
             // 
-            // txtGoogleNew
+            // btnDeleteNew
             // 
-            this.txtGoogleNew.Location = new System.Drawing.Point(120, 17);
-            this.txtGoogleNew.Name = "txtGoogleNew";
-            this.txtGoogleNew.Size = new System.Drawing.Size(267, 20);
-            this.txtGoogleNew.TabIndex = 68;
-            this.txtGoogleNew.TextChanged += new System.EventHandler(this.txtGoogleNew_TextChanged);
-            // 
-            // txtGoogleNew2
-            // 
-            this.txtGoogleNew2.Location = new System.Drawing.Point(120, 18);
-            this.txtGoogleNew2.Name = "txtGoogleNew2";
-            this.txtGoogleNew2.Size = new System.Drawing.Size(267, 20);
-            this.txtGoogleNew2.TabIndex = 59;
-            this.txtGoogleNew2.TextChanged += new System.EventHandler(this.txtGoogleNew2_TextChanged);
-            // 
-            // txtPriceNew
-            // 
-            this.txtPriceNew.Location = new System.Drawing.Point(341, 86);
-            this.txtPriceNew.Name = "txtPriceNew";
-            this.txtPriceNew.Size = new System.Drawing.Size(121, 20);
-            this.txtPriceNew.TabIndex = 73;
+            this.btnDeleteNew.Location = new System.Drawing.Point(393, 196);
+            this.btnDeleteNew.Name = "btnDeleteNew";
+            this.btnDeleteNew.Size = new System.Drawing.Size(75, 23);
+            this.btnDeleteNew.TabIndex = 67;
+            this.btnDeleteNew.Text = "Удалить";
+            this.btnDeleteNew.UseVisualStyleBackColor = true;
+            this.btnDeleteNew.Visible = false;
+            this.btnDeleteNew.Click += new System.EventHandler(this.btnDeleteNew_Click);
             // 
             // panelOut
             // 
             this.panelOut.Controls.Add(this.dgvOut);
             this.panelOut.Controls.Add(this.txtWhy);
             this.panelOut.Controls.Add(this.lblWhy);
-            this.panelOut.Controls.Add(this.btnDeleteOut);
             this.panelOut.Controls.Add(this.lblEmployeeOut);
             this.panelOut.Controls.Add(this.btnChangeOut);
             this.panelOut.Controls.Add(this.btnGoogleOut);
-            this.panelOut.Controls.Add(this.lblStartOut);
             this.panelOut.Controls.Add(this.btnEditOut);
             this.panelOut.Controls.Add(this.cbEmployeeOut);
             this.panelOut.Controls.Add(this.txtIDExemplarOut);
@@ -2165,8 +1948,8 @@
             this.panelOut.Controls.Add(this.lblIDOut);
             this.panelOut.Controls.Add(this.lblGoogleOut);
             this.panelOut.Controls.Add(this.txtGoogleOut);
-            this.panelOut.Controls.Add(this.txtGoogleOut2);
-            this.panelOut.Location = new System.Drawing.Point(496, 490);
+            this.panelOut.Controls.Add(this.btnDeleteOut);
+            this.panelOut.Location = new System.Drawing.Point(496, 255);
             this.panelOut.Name = "panelOut";
             this.panelOut.Size = new System.Drawing.Size(478, 222);
             this.panelOut.TabIndex = 67;
@@ -2188,17 +1971,6 @@
             this.lblWhy.TabIndex = 69;
             this.lblWhy.Text = "Причина:";
             // 
-            // btnDeleteOut
-            // 
-            this.btnDeleteOut.Location = new System.Drawing.Point(196, 196);
-            this.btnDeleteOut.Name = "btnDeleteOut";
-            this.btnDeleteOut.Size = new System.Drawing.Size(75, 23);
-            this.btnDeleteOut.TabIndex = 67;
-            this.btnDeleteOut.Text = "Удалить";
-            this.btnDeleteOut.UseVisualStyleBackColor = true;
-            this.btnDeleteOut.Visible = false;
-            this.btnDeleteOut.Click += new System.EventHandler(this.btnDeleteOut_Click);
-            // 
             // lblEmployeeOut
             // 
             this.lblEmployeeOut.AutoSize = true;
@@ -2210,7 +1982,7 @@
             // 
             // btnChangeOut
             // 
-            this.btnChangeOut.Location = new System.Drawing.Point(331, 196);
+            this.btnChangeOut.Location = new System.Drawing.Point(393, 199);
             this.btnChangeOut.Name = "btnChangeOut";
             this.btnChangeOut.Size = new System.Drawing.Size(75, 23);
             this.btnChangeOut.TabIndex = 63;
@@ -2228,15 +2000,6 @@
             this.btnGoogleOut.Text = "Список";
             this.btnGoogleOut.UseVisualStyleBackColor = true;
             this.btnGoogleOut.Click += new System.EventHandler(this.btnGoogleOut_Click);
-            // 
-            // lblStartOut
-            // 
-            this.lblStartOut.AutoSize = true;
-            this.lblStartOut.Location = new System.Drawing.Point(15, 0);
-            this.lblStartOut.Name = "lblStartOut";
-            this.lblStartOut.Size = new System.Drawing.Size(326, 13);
-            this.lblStartOut.TabIndex = 61;
-            this.lblStartOut.Text = "Выберите произведение, которое Вы хотите отредактировать:";
             // 
             // btnEditOut
             // 
@@ -2258,7 +2021,7 @@
             // 
             // txtIDExemplarOut
             // 
-            this.txtIDExemplarOut.Location = new System.Drawing.Point(120, 118);
+            this.txtIDExemplarOut.Location = new System.Drawing.Point(120, 117);
             this.txtIDExemplarOut.Name = "txtIDExemplarOut";
             this.txtIDExemplarOut.Size = new System.Drawing.Size(121, 20);
             this.txtIDExemplarOut.TabIndex = 56;
@@ -2301,11 +2064,19 @@
             // lblGoogleOut
             // 
             this.lblGoogleOut.AutoSize = true;
-            this.lblGoogleOut.Location = new System.Drawing.Point(7, 21);
+            this.lblGoogleOut.Location = new System.Drawing.Point(15, 21);
             this.lblGoogleOut.Name = "lblGoogleOut";
-            this.lblGoogleOut.Size = new System.Drawing.Size(110, 13);
+            this.lblGoogleOut.Size = new System.Drawing.Size(72, 13);
             this.lblGoogleOut.TabIndex = 60;
-            this.lblGoogleOut.Text = "Найти произвдение:";
+            this.lblGoogleOut.Text = "Найти книгу:";
+            // 
+            // txtGoogleOut
+            // 
+            this.txtGoogleOut.Location = new System.Drawing.Point(120, 18);
+            this.txtGoogleOut.Name = "txtGoogleOut";
+            this.txtGoogleOut.Size = new System.Drawing.Size(267, 20);
+            this.txtGoogleOut.TabIndex = 59;
+            this.txtGoogleOut.TextChanged += new System.EventHandler(this.txtGoogleOut_TextChanged);
             // 
             // dgvOut
             // 
@@ -2319,21 +2090,16 @@
             this.dgvOut.Visible = false;
             this.dgvOut.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvOut_CellContentClick);
             // 
-            // txtGoogleOut
+            // btnDeleteOut
             // 
-            this.txtGoogleOut.Location = new System.Drawing.Point(120, 18);
-            this.txtGoogleOut.Name = "txtGoogleOut";
-            this.txtGoogleOut.Size = new System.Drawing.Size(267, 20);
-            this.txtGoogleOut.TabIndex = 59;
-            this.txtGoogleOut.TextChanged += new System.EventHandler(this.txtGoogleOut_TextChanged);
-            // 
-            // txtGoogleOut2
-            // 
-            this.txtGoogleOut2.Location = new System.Drawing.Point(120, 17);
-            this.txtGoogleOut2.Name = "txtGoogleOut2";
-            this.txtGoogleOut2.Size = new System.Drawing.Size(267, 20);
-            this.txtGoogleOut2.TabIndex = 68;
-            this.txtGoogleOut2.TextChanged += new System.EventHandler(this.txtGoogleOut2_TextChanged);
+            this.btnDeleteOut.Location = new System.Drawing.Point(392, 199);
+            this.btnDeleteOut.Name = "btnDeleteOut";
+            this.btnDeleteOut.Size = new System.Drawing.Size(75, 23);
+            this.btnDeleteOut.TabIndex = 67;
+            this.btnDeleteOut.Text = "Удалить";
+            this.btnDeleteOut.UseVisualStyleBackColor = true;
+            this.btnDeleteOut.Visible = false;
+            this.btnDeleteOut.Click += new System.EventHandler(this.btnDeleteOut_Click);
             // 
             // panelExemplar
             // 
@@ -2354,7 +2120,7 @@
             this.panelExemplar.Controls.Add(this.btnAddExemplar);
             this.panelExemplar.Controls.Add(this.lblGoogleExemplar);
             this.panelExemplar.Controls.Add(this.txtGoogleExemplar);
-            this.panelExemplar.Location = new System.Drawing.Point(980, 490);
+            this.panelExemplar.Location = new System.Drawing.Point(873, 483);
             this.panelExemplar.Name = "panelExemplar";
             this.panelExemplar.Size = new System.Drawing.Size(478, 222);
             this.panelExemplar.TabIndex = 68;
@@ -2529,23 +2295,22 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1362, 741);
+            this.ClientSize = new System.Drawing.Size(1354, 715);
             this.Controls.Add(this.panelContent);
             this.Controls.Add(this.panelExemplar);
-            this.Controls.Add(this.panelOut);
             this.Controls.Add(this.panelNew);
             this.Controls.Add(this.panelSafe);
             this.Controls.Add(this.panelGenre);
             this.Controls.Add(this.panelPub);
             this.Controls.Add(this.panelAuthor);
             this.Controls.Add(this.panelWork);
-            this.Controls.Add(this.panelListBook);
             this.Controls.Add(this.panelBooks);
             this.Controls.Add(this.menuStrip1);
+            this.Controls.Add(this.panelOut);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "AddBooks";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "AddBooks";
+            this.Text = "Книги";
             this.Load += new System.EventHandler(this.AddBooks_Load);
             this.panelBooks.ResumeLayout(false);
             this.panelBooks.PerformLayout();
@@ -2555,9 +2320,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvContent)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            this.panelListBook.ResumeLayout(false);
-            this.panelListBook.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvListBook)).EndInit();
             this.panelWork.ResumeLayout(false);
             this.panelWork.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvWork)).EndInit();
@@ -2590,10 +2352,8 @@
         #endregion
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Panel panelBooks;
-        public System.Windows.Forms.ComboBox cbPublisher;
         public System.Windows.Forms.TextBox txtBook;
         public System.Windows.Forms.ComboBox cbGenre;
-        public System.Windows.Forms.Label label2;
         public System.Windows.Forms.Label label5;
         public System.Windows.Forms.Label label4;
         public System.Windows.Forms.DataGridView dgvBooks;
@@ -2620,15 +2380,9 @@
         private System.Windows.Forms.ToolStripMenuItem mnuDeleteContent;
         private System.Windows.Forms.Button btnEditBook;
         private System.Windows.Forms.Button btnListBook;
-        public System.Windows.Forms.Label label13;
         public System.Windows.Forms.TextBox txtGoogleBook;
         public System.Windows.Forms.Label lblGoogleBook;
         private System.Windows.Forms.Button btnChangeBook;
-        private System.Windows.Forms.Panel panelListBook;
-        private System.Windows.Forms.Button button2;
-        public System.Windows.Forms.TextBox txtGoogleListBook;
-        public System.Windows.Forms.Label label3;
-        public System.Windows.Forms.DataGridView dgvListBook;
         public System.Windows.Forms.TextBox txtID_Book;
         public System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnDeleteBook;
@@ -2659,7 +2413,6 @@
         public System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button btnChangeWork;
         private System.Windows.Forms.Button btnGoogleWork;
-        public System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button btnEditWork;
         public System.Windows.Forms.ComboBox cbAuthor;
         public System.Windows.Forms.TextBox txtNameWork;
@@ -2671,16 +2424,13 @@
         public System.Windows.Forms.Label lblGoogleWork;
         public System.Windows.Forms.DataGridView dgvWork;
         private System.Windows.Forms.Button btnDeleteWork;
-        public System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.ToolStripMenuItem новыеКнигиToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem выбывшиеКнигиToolStripMenuItem1;
         private System.Windows.Forms.Panel panelAuthor;
-        public System.Windows.Forms.TextBox txtGoogleAuthor2;
         private System.Windows.Forms.Button btnDeleteAuthor;
         public System.Windows.Forms.Label lblNameAuthor;
         private System.Windows.Forms.Button btnChangeAuthor;
         private System.Windows.Forms.Button btnGoogleAuthor;
-        public System.Windows.Forms.Label lblStartAuthor;
         private System.Windows.Forms.Button btnEditAuthor;
         public System.Windows.Forms.TextBox txtNameAuthor;
         private System.Windows.Forms.Button btnAddAuthor;
@@ -2694,7 +2444,6 @@
         public System.Windows.Forms.Label lblNameGenre;
         private System.Windows.Forms.Button btnChangeGenre;
         private System.Windows.Forms.Button btnGoogleGenre;
-        public System.Windows.Forms.Label lblStartGenre;
         private System.Windows.Forms.Button btnEditGenre;
         private System.Windows.Forms.Button btnAddGenre;
         public System.Windows.Forms.TextBox txtIDGenre;
@@ -2703,28 +2452,22 @@
         public System.Windows.Forms.TextBox txtGoogleGenre;
         public System.Windows.Forms.TextBox txtNameGenre;
         public System.Windows.Forms.DataGridView dgvGenre;
-        public System.Windows.Forms.TextBox txtGoogleGenre2;
         private System.Windows.Forms.Panel panelPub;
         public System.Windows.Forms.DataGridView dgvPub;
         private System.Windows.Forms.Button btnDeletePub;
-        public System.Windows.Forms.Label lblNamePub;
         private System.Windows.Forms.Button btnChangePub;
         private System.Windows.Forms.Button btnGooglePub;
-        public System.Windows.Forms.Label lblStartPub;
         private System.Windows.Forms.Button btnEditPub;
         private System.Windows.Forms.Button btnAddPub;
         public System.Windows.Forms.TextBox txtIDPub;
         public System.Windows.Forms.Label lblIDPub;
         public System.Windows.Forms.Label lblGooglePub;
-        public System.Windows.Forms.TextBox txtNamePub;
         public System.Windows.Forms.TextBox txtGooglePub;
-        public System.Windows.Forms.TextBox txtGooglePub2;
         private System.Windows.Forms.Panel panelSafe;
         private System.Windows.Forms.Button btnDeleteSafe;
         public System.Windows.Forms.Label lblNameSafe;
         private System.Windows.Forms.Button btnChangeSafe;
         private System.Windows.Forms.Button btnGoogleSafe;
-        public System.Windows.Forms.Label lblStartSafe;
         private System.Windows.Forms.Button btnEditSafe;
         private System.Windows.Forms.Button btnAddSafe;
         public System.Windows.Forms.TextBox txtIDSafe;
@@ -2732,14 +2475,12 @@
         public System.Windows.Forms.Label lblGoogleSafe;
         public System.Windows.Forms.TextBox txtNameSafe;
         public System.Windows.Forms.TextBox txtGoogleSafe;
-        public System.Windows.Forms.TextBox txtGoogleSafe2;
         public System.Windows.Forms.DataGridView dgvSafe;
         private System.Windows.Forms.Panel panelNew;
         private System.Windows.Forms.Button btnDeleteNew;
         public System.Windows.Forms.Label lblEmployeeNew;
         private System.Windows.Forms.Button btnChangeNew;
         private System.Windows.Forms.Button btnGoogleNew;
-        public System.Windows.Forms.Label lblStartNew;
         private System.Windows.Forms.Button btnEditNew;
         public System.Windows.Forms.ComboBox cbEmployeeNew;
         public System.Windows.Forms.TextBox txtIDExemplar;
@@ -2749,7 +2490,6 @@
         public System.Windows.Forms.Label lblIDNew;
         public System.Windows.Forms.Label lblGoogleNew;
         public System.Windows.Forms.TextBox txtGoogleNew;
-        public System.Windows.Forms.TextBox txtGoogleNew2;
         public System.Windows.Forms.DataGridView dgvNew;
         public System.Windows.Forms.TextBox txtPostNew;
         public System.Windows.Forms.TextBox txtDeliveryNew;
@@ -2772,7 +2512,6 @@
         public System.Windows.Forms.Label lblEmployeeOut;
         private System.Windows.Forms.Button btnChangeOut;
         private System.Windows.Forms.Button btnGoogleOut;
-        public System.Windows.Forms.Label lblStartOut;
         private System.Windows.Forms.Button btnEditOut;
         public System.Windows.Forms.ComboBox cbEmployeeOut;
         public System.Windows.Forms.TextBox txtIDExemplarOut;
@@ -2783,7 +2522,6 @@
         public System.Windows.Forms.Label lblGoogleOut;
         public System.Windows.Forms.DataGridView dgvOut;
         public System.Windows.Forms.TextBox txtGoogleOut;
-        public System.Windows.Forms.TextBox txtGoogleOut2;
         private System.Windows.Forms.Panel panelExemplar;
         private System.Windows.Forms.Button btnDeleteExemplar;
         private System.Windows.Forms.Button btnChangeExemplar;
@@ -2800,7 +2538,6 @@
         public System.Windows.Forms.Label lblWorkContent;
         private System.Windows.Forms.Button btnChangeContent;
         private System.Windows.Forms.Button btnGoogleContent;
-        public System.Windows.Forms.Label lblStartContent;
         private System.Windows.Forms.Button btnEditContent;
         private System.Windows.Forms.Button btnAddContent;
         public System.Windows.Forms.Label lblBookContent;
@@ -2820,5 +2557,8 @@
         public System.Windows.Forms.Label lblContent;
         public System.Windows.Forms.Label label10;
         public System.Windows.Forms.Label label9;
+        public System.Windows.Forms.ComboBox cbPublisher;
+        public System.Windows.Forms.Label lblNamePub;
+        public System.Windows.Forms.TextBox txtNamePub;
     }
 }
